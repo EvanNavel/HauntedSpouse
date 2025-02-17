@@ -25,5 +25,3 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.play("Idle")
 	velocity = direction * SPEED
 	move_and_slide()
-
-	move_and_slide()

@@ -1,5 +1,5 @@
-res://scenes/player.tscn
-res://scenes/player.gd
+res://scenes/House/bathroom.tscn
 res://scenes/House/house_tile_set.tres
-res://scenes/House/house.tscn
+res://scenes/player.tscn
 res://scenes/House/houselayers.tscn
+res://scenes/House/kitchen.tscn

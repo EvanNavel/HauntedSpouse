@@ -161,10 +161,11 @@ position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_32hn1")
 animation = &"WalkUp"
 autoplay = "Idle"
-frame_progress = 0.787344
+frame_progress = 0.867484
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_geifj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.5, 2.5)
