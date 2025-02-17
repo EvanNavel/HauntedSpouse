@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=4 uid="uid://o5ueq3ti1v4y"]
+
+[ext_resource type="PackedScene" uid="uid://c8bn8tdguq2sf" path="res://scenes/House/foyer.tscn" id="1_hbyln"]
+[ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_ob757"]
+[ext_resource type="PackedScene" uid="uid://b6kuee3wdyte4" path="res://scenes/House/study.tscn" id="2_n07i3"]
+[ext_resource type="PackedScene" uid="uid://bxj06uu3pxl4g" path="res://scenes/House/kitchen.tscn" id="3_jr5kc"]
+[ext_resource type="PackedScene" uid="uid://b5wvg146b3ihn" path="res://scenes/House/dining_room.tscn" id="5_3w2wf"]
+[ext_resource type="PackedScene" uid="uid://d0cdx7weekfyd" path="res://scenes/player.tscn" id="6_mjk2y"]
+
+[node name="TestFirstFloor" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD0/xAAAAASAA4AAGD0/w8AAAASAA4AAGD1/xAAAAASAA8AAGD1/w8AAAASAA8AAGD2/xAAAAASAA4AAGD2/w8AAAASAA4AAGD3/xAAAAASAA4AAGD3/w8AAAASAA4AAGD4/xAAAAASAA8AAGD4/w8AAAASAA8AAGD0/w4AAAATAA4AAGD1/w4AAAATAA8AAGD2/w4AAAATAA4AAGD3/w4AAAATAA4AAGD4/w4AAAATAA8AAGAJABAAAAASAA4AAGAJAA8AAAATAA4AAGAKABAAAAASAA8AAGAKAA8AAAATAA8AAGALABAAAAASAA4AAGALAA8AAAATAA4AAGAMABAAAAASAA4AAGAMAA8AAAATAA4AAGANABAAAAASAA8AAGANAA8AAAATAA8AAGAMAA4AAAASAA8AAGANAA4AAAASAA8AAGANAA0AAAATAA8AAGALAA4AAAASAA4AAGAJAA4AAAASAA4AAGAJAA0AAAATAA4AAGAKAA4AAAASAA8AAGAnABAAAAASAA4AAGAnABEAAAATAA4AAGAnABIAAAASAA4AAGAoABAAAAASAA8AAGAoABEAAAATAA8AAGAoABIAAAASAA8AAGApABAAAAASAA4AAGApABEAAAATAA4AAGApABIAAAASAA4AAGAqABAAAAASAA8AAGAqABEAAAATAA4AAGAqABIAAAASAA4AAGArABAAAAASAA8AAGArABEAAAATAA8AAGArABIAAAASAA8AAGA=")
+tile_set = ExtResource("1_ob757")
+
+[node name="Foyer" parent="." instance=ExtResource("1_hbyln")]
+position = Vector2(218, 214)
+
+[node name="Study" parent="." instance=ExtResource("2_n07i3")]
+position = Vector2(683, 214)
+
+[node name="Kitchen" parent="." instance=ExtResource("3_jr5kc")]
+position = Vector2(-603, 182)
+
+[node name="DiningRoom" parent="." instance=ExtResource("5_3w2wf")]
+position = Vector2(-121, 182)
+
+[node name="Player" parent="." instance=ExtResource("6_mjk2y")]
+position = Vector2(-490, 284)
