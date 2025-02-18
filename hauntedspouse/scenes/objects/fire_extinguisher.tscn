@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuhh3dw713ck2"]
+
+[ext_resource type="Texture2D" uid="uid://djchyerkjv00" path="res://assets/test_fire_extinguisher.png" id="1_g7l4y"]
+[ext_resource type="PackedScene" uid="uid://ysotjh8vegfv" path="res://scenes/components/collectible_component.tscn" id="2_1wrqr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sham0"]
+radius = 12.0
+
+[node name="FireExtinguisher" type="Sprite2D"]
+texture = ExtResource("1_g7l4y")
+
+[node name="CollectibleComponent" parent="." instance=ExtResource("2_1wrqr")]
+collectible_name = "FireExtinguisher"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectibleComponent"]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_sham0")

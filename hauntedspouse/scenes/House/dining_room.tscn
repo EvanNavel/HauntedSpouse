@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=4 uid="uid://b5wvg146b3ihn"]
+[gd_scene load_steps=3 format=4 uid="uid://b5wvg146b3ihn"]
 
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_t2gog"]
+[ext_resource type="PackedScene" uid="uid://cuhh3dw713ck2" path="res://scenes/objects/fire_extinguisher.tscn" id="2_q6eb3"]
 
 [node name="DiningRoom" type="Node2D"]
 
@@ -29,3 +30,6 @@ tile_set = ExtResource("1_t2gog")
 
 [node name="Doors" type="TileMapLayer" parent="."]
 tile_set = ExtResource("1_t2gog")
+
+[node name="FireExtinguisher" parent="." instance=ExtResource("2_q6eb3")]
+position = Vector2(78, -7)

@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -5,6 +6,9 @@ extends CharacterBody2D
 const SPEED = 150.0
 
 var direction: Vector2
+
+func _ready() -> void:
+	pass
 
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
