@@ -9,7 +9,7 @@ extends CharacterBody2D
 const SPEED = 150.0
 
 var direction: Vector2
-
+var previous_direction: String = 'Down'
 func _ready() -> void:
 	if task_panel:
 		task_panel.visible = false
@@ -31,15 +31,23 @@ func _physics_process(_delta: float) -> void:
 	direction = input_direction.normalized()
 
 	if direction.y < 0:
+		animated_sprite_2d.flip_h = false
 		animated_sprite_2d.play("WalkUp")
+		previous_direction = "Up"
 	elif direction.y > 0:
+		animated_sprite_2d.flip_h = false
 		animated_sprite_2d.play("WalkDown")
+		previous_direction = "Down"
 	elif direction.x < 0:
-		animated_sprite_2d.play("WalkLeft")
+		animated_sprite_2d.play("WalkLeftRight")
+		animated_sprite_2d.flip_h = false
+		previous_direction = "LeftRight"
 	elif direction.x > 0:
-		animated_sprite_2d.play("WalkRight")
+		animated_sprite_2d.play("WalkLeftRight")
+		animated_sprite_2d.flip_h = true
+		previous_direction = "LeftRight"
 	
 	if direction == Vector2.ZERO:
-		animated_sprite_2d.play("Idle")
+		animated_sprite_2d.play("Idle"+previous_direction)
 	velocity = direction * SPEED
 	move_and_slide()
