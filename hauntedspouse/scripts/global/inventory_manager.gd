@@ -1,7 +1,7 @@
 extends Node
 
 var inventory: Dictionary = Dictionary()
-
+var task_string = "Tasks\n"
 signal inventory_changed()
 
 func add_collectible(collectible_name: String) -> void:

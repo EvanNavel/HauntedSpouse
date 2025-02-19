@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxmbi20h60tp3"]
+[gd_scene load_steps=4 format=3 uid="uid://cxmbi20h60tp3"]
 
 [ext_resource type="Texture2D" uid="uid://cix14i8p7xvdi" path="res://assets/ui/UI assets pack 2/UI books & more.png" id="1_obiwx"]
+[ext_resource type="Script" path="res://scenes/ui/task_panel.gd" id="1_y46kw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8ado"]
 atlas = ExtResource("1_obiwx")
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_y46kw")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(200, 200)
@@ -37,9 +39,7 @@ theme_override_constants/margin_bottom = 17
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_vertical = 0
-text = "Tasks
-Clean Dishes
-Put out fire.. PUT OUT FIRE
-Find Mop"
+theme_override_font_sizes/font_size = 16
+text = "Tasks"
 horizontal_alignment = 1
 autowrap_mode = 3

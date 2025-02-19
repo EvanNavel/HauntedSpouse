@@ -17,7 +17,7 @@ func _ready() -> void:
 	if inventory_panel:
 		inventory_panel.visible = false
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	#toggle for task panel
 	if task_panel and Input.is_action_just_pressed("task_toggle"):
 		task_panel.visible = !task_panel.visible

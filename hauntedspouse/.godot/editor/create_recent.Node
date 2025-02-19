@@ -1,8 +1,10 @@
+CollisionShape2D
+Area2D
+StaticBody2D
+AnimatedSprite2D
 Window
 SubViewport
 CharacterBody2D
-CollisionShape2D
-Area2D
 Sprite2D
 Timer
 Node
@@ -10,5 +12,3 @@ AudioStreamPlayer2D
 VBoxContainer
 Label
 Control
-Button
-NinePatchRect

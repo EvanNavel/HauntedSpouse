@@ -16,7 +16,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(area_count)
 	if area_count == finished_count:
 		if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			queue_free()
