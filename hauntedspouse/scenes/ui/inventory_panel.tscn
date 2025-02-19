@@ -1,0 +1,163 @@
+[gd_scene load_steps=11 format=3 uid="uid://dcuymj6kvo5op"]
+
+[ext_resource type="Texture2D" uid="uid://cix14i8p7xvdi" path="res://assets/ui/UI assets pack 2/UI books & more.png" id="1_7p6ir"]
+[ext_resource type="Script" path="res://scenes/ui/inventory_panel.gd" id="1_lijyd"]
+[ext_resource type="Texture2D" uid="uid://djchyerkjv00" path="res://assets/test_fire_extinguisher.png" id="2_jdvc3"]
+[ext_resource type="Texture2D" uid="uid://cqvqxnqq2lq4w" path="res://assets/test_key_first_floor.png" id="3_irjd0"]
+[ext_resource type="Texture2D" uid="uid://c8h1m2y3k73vx" path="res://assets/test_mop.png" id="4_dqeks"]
+[ext_resource type="Texture2D" uid="uid://ewih1e34le0g" path="res://assets/test_key_attic.png" id="5_bj3kn"]
+[ext_resource type="Texture2D" uid="uid://chntvpdsudyn8" path="res://assets/test_cleansing_book.png" id="6_r30h8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8kmo"]
+atlas = ExtResource("1_7p6ir")
+region = Rect2(352, 272, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a8e5"]
+atlas = ExtResource("1_7p6ir")
+region = Rect2(720, 64, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_so57a"]
+texture = SubResource("AtlasTexture_6a8e5")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 9.0
+texture_margin_bottom = 9.0
+
+[node name="InventoryPanel" type="PanelContainer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+script = ExtResource("1_lijyd")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_e8kmo")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="separator" type="Control" parent="MarginContainer/NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="FireExtinguisher" type="Button" parent="MarginContainer/NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/normal = SubResource("StyleBoxTexture_so57a")
+disabled = true
+icon = ExtResource("2_jdvc3")
+icon_alignment = 1
+
+[node name="separator2" type="Control" parent="MarginContainer/NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(2, 2)
+layout_mode = 2
+
+[node name="FirstFloorKey" type="Button" parent="MarginContainer/NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/normal = SubResource("StyleBoxTexture_so57a")
+disabled = true
+icon = ExtResource("3_irjd0")
+icon_alignment = 1
+
+[node name="separator3" type="Control" parent="MarginContainer/NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(2, 2)
+layout_mode = 2
+
+[node name="Mop" type="Button" parent="MarginContainer/NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/normal = SubResource("StyleBoxTexture_so57a")
+disabled = true
+icon = ExtResource("4_dqeks")
+icon_alignment = 1
+
+[node name="separator4" type="Control" parent="MarginContainer/NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(2, 2)
+layout_mode = 2
+
+[node name="AtticKey" type="Button" parent="MarginContainer/NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/normal = SubResource("StyleBoxTexture_so57a")
+disabled = true
+icon = ExtResource("5_bj3kn")
+icon_alignment = 1
+
+[node name="separator5" type="Control" parent="MarginContainer/NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(2, 2)
+layout_mode = 2
+
+[node name="CleansingBook" type="Button" parent="MarginContainer/NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_so57a")
+theme_override_styles/normal = SubResource("StyleBoxTexture_so57a")
+disabled = true
+icon = ExtResource("6_r30h8")
+icon_alignment = 1
+
+[node name="separator6" type="Control" parent="MarginContainer/NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="ItemLabel" type="Label" parent="MarginContainer/NinePatchRect"]
+layout_mode = 2
+offset_left = 3.0
+offset_top = -25.0
+offset_right = 39.0
+offset_bottom = -2.0
+size_flags_vertical = 0
+text = "item"
+horizontal_alignment = 1

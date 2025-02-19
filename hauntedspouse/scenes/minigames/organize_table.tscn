@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://bw1onc65swr5y"]
+
+[ext_resource type="Script" path="res://scenes/minigames/organize_table.gd" id="1_cr5vw"]
+[ext_resource type="Texture2D" uid="uid://kxeekynmt88i" path="res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_objects.png" id="2_s1jsp"]
+[ext_resource type="PackedScene" uid="uid://b5764i6cd7hgt" path="res://scenes/minigames/plate_moveable.tscn" id="3_2caa0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8e52"]
+atlas = ExtResource("2_s1jsp")
+region = Rect2(256, 160, 64, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fuerb"]
+
+[node name="OrganizeTable" type="Window"]
+canvas_item_default_texture_filter = 0
+physics_object_picking = true
+physics_object_picking_sort = true
+physics_object_picking_first_only = true
+initial_position = 1
+size = Vector2i(700, 450)
+script = ExtResource("1_cr5vw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(500, 300)
+offset_right = 700.0
+offset_bottom = 300.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.113725, 0.0509804, 0.113725, 1)
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(700, 200)
+layout_mode = 2
+size_flags_vertical = 8
+texture = SubResource("AtlasTexture_e8e52")
+
+[node name="PlateMoveable" parent="MarginContainer" instance=ExtResource("3_2caa0")]
+position = Vector2(210, 60)
+
+[node name="PlateMoveable2" parent="MarginContainer" instance=ExtResource("3_2caa0")]
+position = Vector2(120, 400)
+
+[node name="PlateMoveable3" parent="MarginContainer" instance=ExtResource("3_2caa0")]
+position = Vector2(650, 100)
+
+[node name="PlateArea" type="Area2D" parent="MarginContainer"]
+position = Vector2(100, 250)
+
+[node name="platearea1collision" type="CollisionShape2D" parent="MarginContainer/PlateArea"]
+scale = Vector2(6, 6)
+shape = SubResource("CircleShape2D_fuerb")
+
+[node name="PlateArea2" type="Area2D" parent="MarginContainer"]
+position = Vector2(300, 250)
+
+[node name="platearea2collision" type="CollisionShape2D" parent="MarginContainer/PlateArea2"]
+scale = Vector2(6, 6)
+shape = SubResource("CircleShape2D_fuerb")
+
+[node name="PlateArea3" type="Area2D" parent="MarginContainer"]
+position = Vector2(500, 250)
+
+[node name="platearea3collision" type="CollisionShape2D" parent="MarginContainer/PlateArea3"]
+scale = Vector2(6, 6)
+shape = SubResource("CircleShape2D_fuerb")
+
+[connection signal="area_entered" from="MarginContainer/PlateArea" to="." method="_on_plate_area_area_entered"]
+[connection signal="area_entered" from="MarginContainer/PlateArea2" to="." method="_on_plate_area_2_area_entered"]
+[connection signal="area_entered" from="MarginContainer/PlateArea3" to="." method="_on_plate_area_3_area_entered"]
