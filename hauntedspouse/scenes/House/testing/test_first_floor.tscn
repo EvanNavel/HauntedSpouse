@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://o5ueq3ti1v4y"]
+[gd_scene load_steps=9 format=4 uid="uid://o5ueq3ti1v4y"]
 
 [ext_resource type="PackedScene" uid="uid://c8bn8tdguq2sf" path="res://scenes/House/foyer.tscn" id="1_hbyln"]
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_ob757"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bxj06uu3pxl4g" path="res://scenes/House/kitchen.tscn" id="3_jr5kc"]
 [ext_resource type="PackedScene" uid="uid://b5wvg146b3ihn" path="res://scenes/House/dining_room.tscn" id="5_3w2wf"]
 [ext_resource type="PackedScene" uid="uid://d0cdx7weekfyd" path="res://scenes/player.tscn" id="6_mjk2y"]
+[ext_resource type="PackedScene" uid="uid://d31egc2sj82um" path="res://scenes/ui/game_screen.tscn" id="7_wa2xf"]
+[ext_resource type="AudioStream" uid="uid://c1kelkpko4u7c" path="res://assets/music/Game Jam Overworld Theme wav.wav" id="8_3x087"]
 
 [node name="TestFirstFloor" type="Node2D"]
 
@@ -25,5 +27,15 @@ position = Vector2(-603, 182)
 [node name="DiningRoom" parent="." instance=ExtResource("5_3w2wf")]
 position = Vector2(-121, 182)
 
-[node name="Player" parent="." instance=ExtResource("6_mjk2y")]
+[node name="Player" parent="." node_paths=PackedStringArray("task_panel", "inventory_panel") instance=ExtResource("6_mjk2y")]
 position = Vector2(-490, 284)
+task_panel = NodePath("../GameScreen/TaskPanel")
+inventory_panel = NodePath("../GameScreen/InventoryPanel")
+
+[node name="GameScreen" parent="." instance=ExtResource("7_wa2xf")]
+
+[node name="OverworldMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_3x087")
+autoplay = true
+
+[editable path="GameScreen"]

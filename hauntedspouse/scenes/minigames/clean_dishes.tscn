@@ -21,6 +21,8 @@ script = ExtResource("1_6ip3b")
 custom_minimum_size = Vector2(500, 300)
 offset_right = 40.0
 offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="ColorRect" type="ColorRect" parent="MarginContainer"]
 layout_mode = 2

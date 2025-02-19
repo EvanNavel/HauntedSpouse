@@ -22,9 +22,10 @@ func _process(delta: float) -> void:
 			print("Tasks Done: " + str(tasks_done))
 
 
-func _on_sink_area_body_entered(body: CharacterBody2D) -> void:
-	if not dishes_clean:
-		clean_dishes.visible = true
+func _on_sink_area_body_entered(body: Node2D) -> void:
+	if body is Player:
+		if not dishes_clean:
+			clean_dishes.visible = true
 
 func _on_sink_area_body_exited(body: Node2D) -> void:
 	if sink_being_freed:

@@ -1,6 +1,8 @@
-res://scenes/objects
-res://scenes/components
 res://scenes/minigames
+res://scenes/ui
+res://scenes/objects
+res://scripts/global
+res://scenes/components
 res://assets
 res://scenes/House
 res://scenes/House/testing

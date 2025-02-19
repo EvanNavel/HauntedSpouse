@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=4 uid="uid://c8bn8tdguq2sf"]
+[gd_scene load_steps=3 format=4 uid="uid://c8bn8tdguq2sf"]
 
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_syb4a"]
+[ext_resource type="PackedScene" uid="uid://dk5b4sfx1wqx4" path="res://scenes/objects/first_floor_key.tscn" id="2_0qiy8"]
 
 [node name="Foyer" type="Node2D"]
 
@@ -28,5 +29,10 @@ tile_map_data = PackedByteArray("AAAIAP3/AQAQABIAAAAIAP7/AQAQABMAAAAJAP3/AQARABI
 tile_set = ExtResource("1_syb4a")
 
 [node name="Doors" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAFAPz/AAAMAAwAAAAFAP3/AAAMAA0AAAAGAPz/AAANAAwAAAAGAP3/AAANAA0AAAAFAP7/AAAOAAwAAAAFAP//AAAOAA0AAAAGAP7/AAAPAAwAAAAGAP//AAAPAA0AAAAVAPz/AAAMAAwAAAAVAP3/AAAMAA0AAAAVAP7/AAAOAAwAAAAVAP//AAAOAA0AAAAWAPz/AAANAAwAAAAWAP3/AAANAA0AAAAWAP7/AAAPAAwAAAAWAP//AAAPAA0AAAA=")
+z_index = 1
+tile_map_data = PackedByteArray("AAAVAPz/AAAMAAwAAAAVAP3/AAAMAA0AAAAVAP7/AAAOAAwAAAAVAP//AAAOAA0AAAAWAPz/AAANAAwAAAAWAP3/AAANAA0AAAAWAP7/AAAPAAwAAAAWAP//AAAPAA0AAAAFAPz/AAAMAAwAAAAFAP3/AAAMAA0AAAAGAPz/AAANAAwAAAAGAP3/AAANAA0AAAAFAP7/AAAOAAwAAAAFAP//AAAOAA0AAAAGAP7/AAAPAAwAAAAGAP//AAAPAA0AAAA=")
 tile_set = ExtResource("1_syb4a")
+
+[node name="FirstFloorKey" parent="." instance=ExtResource("2_0qiy8")]
+position = Vector2(33, 103)
+scale = Vector2(0.5, 0.5)

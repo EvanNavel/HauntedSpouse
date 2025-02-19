@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxmbi20h60tp3"]
+
+[ext_resource type="Texture2D" uid="uid://cix14i8p7xvdi" path="res://assets/ui/UI assets pack 2/UI books & more.png" id="1_obiwx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8ado"]
+atlas = ExtResource("1_obiwx")
+region = Rect2(768, 64, 48, 48)
+
+[node name="TaskPanel" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_h8ado")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/NinePatchRect"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 17
+theme_override_constants/margin_top = 17
+theme_override_constants/margin_right = 17
+theme_override_constants/margin_bottom = 17
+
+[node name="Label" type="Label" parent="MarginContainer/NinePatchRect/MarginContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+text = "Tasks
+Clean Dishes
+Put out fire.. PUT OUT FIRE
+Find Mop"
+horizontal_alignment = 1
+autowrap_mode = 3

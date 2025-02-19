@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5764i6cd7hgt"]
+
+[ext_resource type="Texture2D" uid="uid://cf0fmqyjgbeix" path="res://assets/test_plate.png" id="1_yv8hy"]
+[ext_resource type="Script" path="res://scenes/minigames/moveable_area.gd" id="2_mpmxk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ovqn"]
+radius = 67.0
+
+[node name="PlateMoveable" type="Sprite2D"]
+texture = ExtResource("1_yv8hy")
+
+[node name="Moveable_Area" type="Area2D" parent="."]
+script = ExtResource("2_mpmxk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moveable_Area"]
+shape = SubResource("CircleShape2D_7ovqn")
+
+[connection signal="mouse_entered" from="Moveable_Area" to="Moveable_Area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Moveable_Area" to="Moveable_Area" method="_on_mouse_exited"]
