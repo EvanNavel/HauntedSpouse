@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://o5ueq3ti1v4y"]
+[gd_scene load_steps=11 format=4 uid="uid://o5ueq3ti1v4y"]
 
 [ext_resource type="PackedScene" uid="uid://c8bn8tdguq2sf" path="res://scenes/House/foyer.tscn" id="1_hbyln"]
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_ob757"]
@@ -15,6 +15,7 @@
 y_sort_enabled = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAgAAYAAAALAAYAAAAgAAcAAAALAAYAAAAgAAgAAAALAAYAAAAhAAYAAAALAAYAAAAhAAcAAAALAAYAAAAhAAgAAAALAAYAAAAiAAYAAAALAAYAAAAiAAcAAAALAAYAAAAiAAgAAAALAAYAAAAjAAYAAAALAAYAAAAjAAcAAAALAAYAAAAjAAgAAAALAAYAAAAkAAYAAAALAAYAAAAkAAgAAAALAAYAAAAlAAYAAAALAAYAAAAlAAcAAAALAAYAAAAlAAgAAAALAAYAAAAmAAYAAAALAAYAAAAmAAcAAAALAAYAAAAmAAgAAAALAAYAAAAkAAcAAAALAAYAAAA=")
 tile_set = ExtResource("1_ob757")
 
 [node name="Study" parent="." instance=ExtResource("2_n07i3")]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwc8bnncn1wvf"]
+
+[ext_resource type="PackedScene" uid="uid://bykeqenhasg3t" path="res://scenes/House/master_bedroom.tscn" id="1_ygo62"]
+[ext_resource type="PackedScene" uid="uid://b3vi1l5no1sbi" path="res://scenes/House/hall.tscn" id="2_ika4m"]
+[ext_resource type="PackedScene" uid="uid://cshijii7atq5a" path="res://scenes/House/master_bathroom.tscn" id="3_4dbhi"]
+
+[node name="TestSecondFloor" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Master Bedroom" parent="." instance=ExtResource("1_ygo62")]
+position = Vector2(268, 153)
+
+[node name="Stairs1" parent="." instance=ExtResource("2_ika4m")]
+position = Vector2(524, 281)
+
+[node name="Hall" parent="." instance=ExtResource("3_4dbhi")]
+position = Vector2(188, 9)
