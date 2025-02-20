@@ -162,6 +162,7 @@ size = Vector2(25, 52)
 size = Vector2(25, 87)
 
 [node name="Door" type="StaticBody2D"]
+collision_mask = 2
 script = ExtResource("1_g0054")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

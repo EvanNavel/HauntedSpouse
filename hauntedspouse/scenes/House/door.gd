@@ -8,7 +8,6 @@ extends StaticBody2D
 func _ready() -> void:
 	interactible_component.interactible_activated.connect(on_interactible_activated)
 	interactible_component.interactible_deactivated.connect(on_interactible_deactivated)
-	collision_layer = 1
 	animated_sprite_2d.play("default")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,8 +16,8 @@ func _process(_delta: float) -> void:
 
 func on_interactible_activated() -> void:
 	animated_sprite_2d.play("open_door")
-	collision_layer = 2
+	collision_shape_2d.set_deferred("disabled", true)
 	
 func on_interactible_deactivated() -> void:
 	animated_sprite_2d.play("close_door")
-	collision_layer = 1
+	collision_shape_2d.set_deferred("disabled", false)

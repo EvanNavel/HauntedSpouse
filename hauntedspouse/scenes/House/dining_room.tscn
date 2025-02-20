@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=4 uid="uid://b5wvg146b3ihn"]
+[gd_scene load_steps=5 format=4 uid="uid://b5wvg146b3ihn"]
 
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_t2gog"]
 [ext_resource type="PackedScene" uid="uid://cuhh3dw713ck2" path="res://scenes/objects/fire_extinguisher.tscn" id="2_q6eb3"]
+[ext_resource type="PackedScene" uid="uid://cd7wecw3juqdd" path="res://scenes/ghosts/ghost.tscn" id="3_qmqe6"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ty8gf"]
+vertices = PackedVector2Array(258, 110.961, 18, 110.031, 18, 15, 258, 15)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(8, 5, 8, 120, 268, 121, 268, 5)])
 
 [node name="DiningRoom" type="Node2D"]
 
@@ -33,3 +39,9 @@ tile_set = ExtResource("1_t2gog")
 
 [node name="FireExtinguisher" parent="." instance=ExtResource("2_q6eb3")]
 position = Vector2(78, -7)
+
+[node name="Ghost" parent="." instance=ExtResource("3_qmqe6")]
+position = Vector2(189, 20)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_ty8gf")
