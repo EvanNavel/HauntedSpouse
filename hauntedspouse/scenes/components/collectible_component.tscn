@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scenes/components/collectible_component.gd" id="1_fsfjy"]
 
 [node name="CollectibleComponent" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_fsfjy")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

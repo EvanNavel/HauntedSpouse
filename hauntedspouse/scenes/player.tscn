@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d0cdx7weekfyd"]
+[gd_scene load_steps=23 format=3 uid="uid://d0cdx7weekfyd"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_ugm0q"]
 [ext_resource type="Texture2D" uid="uid://bsbxmiykjuijg" path="res://assets/player/player_down.png" id="2_neqgf"]
@@ -145,14 +145,19 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lsqj1"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_yjpnn"]
+radius = 13.3333
+
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.9, 0.9)
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_ugm0q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_32hn1")
-animation = &"IdleLeftRight"
+animation = &"IdleDown"
 autoplay = "IdleDown"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -161,3 +166,17 @@ shape = SubResource("CircleShape2D_lsqj1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
+
+[node name="scare_area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scare_area"]
+position = Vector2(0, -1.11111)
+shape = SubResource("CircleShape2D_yjpnn")
+
+[node name="ScareTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="scare_area" to="." method="_on_scare_area_body_entered"]
+[connection signal="timeout" from="ScareTimer" to="." method="_on_scare_timer_timeout"]

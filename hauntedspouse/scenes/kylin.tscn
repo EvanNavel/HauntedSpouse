@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://txr366fe71hs"]
+
+[ext_resource type="Texture2D" uid="uid://yf7utlmutc0s" path="res://assets/kylin.png" id="1_wt7ff"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjqi5"]
+atlas = ExtResource("1_wt7ff")
+region = Rect2(0, 0, 360, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1aji"]
+atlas = ExtResource("1_wt7ff")
+region = Rect2(360, 0, 360, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wexbg"]
+atlas = ExtResource("1_wt7ff")
+region = Rect2(720, 0, 360, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgu5p"]
+atlas = ExtResource("1_wt7ff")
+region = Rect2(1080, 0, 360, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omjs5"]
+atlas = ExtResource("1_wt7ff")
+region = Rect2(1440, 0, 360, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3drr2"]
+atlas = ExtResource("1_wt7ff")
+region = Rect2(0, 500, 360, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vu1ua"]
+atlas = ExtResource("1_wt7ff")
+region = Rect2(360, 500, 360, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2x2y"]
+atlas = ExtResource("1_wt7ff")
+region = Rect2(720, 500, 360, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ipjds"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjqi5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1aji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wexbg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgu5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omjs5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3drr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vu1ua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2x2y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Kylin" type="Node2D"]
+scale = Vector2(0.25, 0.25)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -250)
+sprite_frames = SubResource("SpriteFrames_ipjds")
+autoplay = "default"
+frame_progress = 0.913107

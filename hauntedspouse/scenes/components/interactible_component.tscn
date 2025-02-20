@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scenes/components/interactible_component.gd" id="1_hevoi"]
 
 [node name="InteractibleComponent" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_hevoi")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
