@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://t2x4itt4y165"]
+
+[ext_resource type="Texture2D" uid="uid://h1wvuqgdllm2" path="res://assets/objects/fire.png" id="1_5faa8"]
+[ext_resource type="Script" path="res://scenes/objects/fire_moving.gd" id="1_nb3v3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orib5"]
+atlas = ExtResource("1_5faa8")
+region = Rect2(0, 0, 22, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnf5l"]
+atlas = ExtResource("1_5faa8")
+region = Rect2(22, 0, 22, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhuul"]
+atlas = ExtResource("1_5faa8")
+region = Rect2(44, 0, 22, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c38ub"]
+atlas = ExtResource("1_5faa8")
+region = Rect2(66, 0, 22, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j16ri"]
+atlas = ExtResource("1_5faa8")
+region = Rect2(88, 0, 22, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_joyxp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orib5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnf5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhuul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c38ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j16ri")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0fob6"]
+radius = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hxdnr"]
+radius = 11.0
+
+[node name="FireMoving" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_nb3v3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -7)
+sprite_frames = SubResource("SpriteFrames_joyxp")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_0fob6")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+
+[node name="FireArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireArea"]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_hxdnr")
+debug_color = Color(0.710425, 0.324488, 0.904354, 0.42)
+
+[connection signal="mouse_entered" from="FireArea" to="." method="_on_fire_area_mouse_entered"]
+[connection signal="mouse_exited" from="FireArea" to="." method="_on_fire_area_mouse_exited"]

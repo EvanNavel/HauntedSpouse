@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dcuymj6kvo5op"]
+[gd_scene load_steps=12 format=3 uid="uid://dcuymj6kvo5op"]
 
 [ext_resource type="Texture2D" uid="uid://cix14i8p7xvdi" path="res://assets/ui/UI assets pack 2/UI books & more.png" id="1_7p6ir"]
 [ext_resource type="Script" path="res://scenes/ui/inventory_panel.gd" id="1_lijyd"]
 [ext_resource type="Texture2D" uid="uid://djchyerkjv00" path="res://assets/test_fire_extinguisher.png" id="2_jdvc3"]
-[ext_resource type="Texture2D" uid="uid://cqvqxnqq2lq4w" path="res://assets/test_key_first_floor.png" id="3_irjd0"]
-[ext_resource type="Texture2D" uid="uid://c8h1m2y3k73vx" path="res://assets/test_mop.png" id="4_dqeks"]
-[ext_resource type="Texture2D" uid="uid://ewih1e34le0g" path="res://assets/test_key_attic.png" id="5_bj3kn"]
+[ext_resource type="Texture2D" uid="uid://jjctuseq4pj3" path="res://assets/keys.png" id="4_qg8m3"]
+[ext_resource type="Texture2D" uid="uid://56cjqos8pmgi" path="res://assets/test_mop_button.png" id="5_4esly"]
 [ext_resource type="Texture2D" uid="uid://chntvpdsudyn8" path="res://assets/test_cleansing_book.png" id="6_r30h8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e8kmo"]
@@ -22,6 +21,14 @@ texture_margin_left = 9.0
 texture_margin_top = 9.0
 texture_margin_right = 9.0
 texture_margin_bottom = 9.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hccu0"]
+atlas = ExtResource("4_qg8m3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbhtj"]
+atlas = ExtResource("4_qg8m3")
+region = Rect2(96, 0, 32, 32)
 
 [node name="InventoryPanel" type="PanelContainer"]
 anchors_preset = 7
@@ -91,7 +98,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_so57a")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_so57a")
 theme_override_styles/normal = SubResource("StyleBoxTexture_so57a")
 disabled = true
-icon = ExtResource("3_irjd0")
+icon = SubResource("AtlasTexture_hccu0")
 icon_alignment = 1
 
 [node name="separator3" type="Control" parent="MarginContainer/NinePatchRect/HBoxContainer"]
@@ -109,7 +116,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_so57a")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_so57a")
 theme_override_styles/normal = SubResource("StyleBoxTexture_so57a")
 disabled = true
-icon = ExtResource("4_dqeks")
+icon = ExtResource("5_4esly")
 icon_alignment = 1
 
 [node name="separator4" type="Control" parent="MarginContainer/NinePatchRect/HBoxContainer"]
@@ -127,7 +134,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_so57a")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_so57a")
 theme_override_styles/normal = SubResource("StyleBoxTexture_so57a")
 disabled = true
-icon = ExtResource("5_bj3kn")
+icon = SubResource("AtlasTexture_jbhtj")
 icon_alignment = 1
 
 [node name="separator5" type="Control" parent="MarginContainer/NinePatchRect/HBoxContainer"]

@@ -1,5 +1,6 @@
 extends Node
 
+var rooms_cleansed = 0
 var inventory: Dictionary = Dictionary()
 var task_string = "Tasks\n"
 signal inventory_changed()

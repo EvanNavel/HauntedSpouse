@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://8ce7nx80ou04"]
+
+[ext_resource type="Script" path="res://scenes/minigames/put_out_fire.gd" id="1_p126l"]
+[ext_resource type="PackedScene" uid="uid://b2bac4xxfn6i3" path="res://scenes/minigames/moving_fires_screen.tscn" id="1_su4g3"]
+
+[node name="PutOutFire" type="Node2D"]
+script = ExtResource("1_p126l")
+
+[node name="Window" type="Window" parent="."]
+canvas_item_default_texture_filter = 0
+physics_object_picking = true
+physics_object_picking_sort = true
+physics_object_picking_first_only = true
+title = "Click the fire to put it out!"
+initial_position = 1
+size = Vector2i(700, 300)
+visible = false
+
+[node name="MovingFiresScreen" parent="Window" instance=ExtResource("1_su4g3")]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4dpn5ci2r2km"]
+
+[ext_resource type="Texture2D" uid="uid://dtftw3ve4duek" path="res://assets/shmoo.png" id="1_7r3of"]
+
+[node name="Shmoo" type="Sprite2D"]
+texture = ExtResource("1_7r3of")
