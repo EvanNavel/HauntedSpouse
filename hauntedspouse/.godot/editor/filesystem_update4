@@ -1,9 +1,11 @@
 res://scenes/House/door.tscn
 res://scenes/House/house_tile_set.tres
 res://scenes/House/master_bedroom.tscn
-res://scenes/House/stairs1.tscn
 res://scenes/House/hall.tscn
+res://scenes/House/master_bathroom.tscn
 res://scenes/House/testing/test_first_floor.tscn
 res://scenes/House/dining_room.tscn
 res://scenes/House/testing/test_second_floor.tscn
-res://scenes/House/master_bathroom.tscn
+res://scenes/components/collectible_component.tscn
+res://scenes/components/interactible_component.tscn
+res://scenes/House/closet.tscn
