@@ -25,5 +25,6 @@ res://scenes/kylin.tscn
 res://scenes/ghosts/ghost.tscn
 res://scenes/components/collectible_component.tscn
 res://scenes/ui/title_screen.tscn
+res://scenes/ui/settings.tscn
+res://scenes/ui/settings.gd
 res://scenes/ui/title_screen.gd
-res://scenes/ui/title_animation.gd
