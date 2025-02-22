@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3buccn73dc25"]
+
+[ext_resource type="Script" path="res://scenes/ui/title_screen.gd" id="1_7am6i"]
+[ext_resource type="Texture2D" uid="uid://o5440q3grp7g" path="res://assets/ui/logo.png" id="1_dnw6o"]
+[ext_resource type="Texture2D" uid="uid://dn71rn020ef8v" path="res://assets/air male big.png" id="3_iccpw"]
+[ext_resource type="Script" path="res://scenes/ui/title_animation.gd" id="3_vbsw7"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_7am6i")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -16.0
+offset_right = 972.0
+offset_bottom = 558.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 23.971
+anchor_bottom = 13.47
+offset_left = 315.0
+offset_top = 147.0
+offset_right = -350.84
+offset_bottom = -242.8
+texture = ExtResource("1_dnw6o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 386.0
+offset_right = 473.0
+offset_bottom = 426.0
+
+[node name="start_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="settings_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="quit_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(173, 239)
+texture = ExtResource("3_iccpw")
+script = ExtResource("3_vbsw7")
