@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://8ce7nx80ou04"]
+[gd_scene load_steps=3 format=3 uid="uid://bh614r7jpm1qm"]
 
 [ext_resource type="Script" path="res://scenes/minigames/put_out_fire.gd" id="1_p126l"]
-[ext_resource type="PackedScene" uid="uid://b2bac4xxfn6i3" path="res://scenes/minigames/moving_fires_screen.tscn" id="1_su4g3"]
+[ext_resource type="PackedScene" uid="uid://b3m32fqshgj6b" path="res://scenes/minigames/moving_fires_screen.tscn" id="1_su4g3"]
 
 [node name="PutOutFire" type="Node2D"]
 script = ExtResource("1_p126l")

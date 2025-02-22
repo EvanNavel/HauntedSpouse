@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_gb2e7"]
 [ext_resource type="PackedScene" uid="uid://cd7wecw3juqdd" path="res://scenes/ghosts/ghost.tscn" id="2_feehj"]
-[ext_resource type="PackedScene" uid="uid://c338fjvxpplk4" path="res://scenes/objects/fire.tscn" id="3_0qoxg"]
+[ext_resource type="PackedScene" path="res://scenes/objects/fire.tscn" id="3_0qoxg"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_68j8s"]
 vertices = PackedVector2Array(398, 16.9531, 398, 173.969, 14.9375, 173.023, 14.0469, 15.0469)

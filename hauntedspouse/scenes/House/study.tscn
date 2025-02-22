@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_i1qay"]
 [ext_resource type="PackedScene" uid="uid://duu2nv5tlm5yb" path="res://scenes/objects/cleansing_book.tscn" id="2_wdebm"]
-[ext_resource type="PackedScene" uid="uid://c338fjvxpplk4" path="res://scenes/objects/fire.tscn" id="3_ncv8y"]
+[ext_resource type="PackedScene" path="res://scenes/objects/fire.tscn" id="3_ncv8y"]
 
 [node name="Study" type="Node2D"]
 y_sort_enabled = true

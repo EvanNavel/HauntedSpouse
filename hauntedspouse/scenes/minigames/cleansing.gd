@@ -6,6 +6,7 @@ extends Node2D
 @onready var ghost_1_sprite: AnimatedSprite2D = $GhostStatic/AnimatedSprite2D
 @onready var ghost_2_sprite: AnimatedSprite2D = $GhostStatic2/AnimatedSprite2D
 @onready var ghost_3_sprite: AnimatedSprite2D = $GhostStatic3/AnimatedSprite2D
+@onready var cleanse_area_label: Label = $CleanseAreaLabel
 
 var player_in_area = false
 
@@ -16,6 +17,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if InventoryManager.inventory.has("CleansingBook"):
+		cleanse_area_label.text = "Press E"
+	else:
+		cleanse_area_label.text = "Need Cleansing Book"
 	if player_in_area and Input.is_action_just_pressed("interact") and InventoryManager.inventory.has("CleansingBook"):
 		ghost_1_sprite.play("GhostPoofDown")
 		ghost_2_sprite.play("GhostPoofDown")

@@ -1,10 +1,10 @@
+res://scenes/objects
 res://scenes/ghosts
 res://assets/ghosts/Ghost1/Attack
+res://scenes/minigames
 res://assets/ghosts/Ghost1/Death
 res://assets/ghosts/Ghost1/Idle
 res://assets/ghosts/Ghost2/Attack
-res://scenes/minigames
-res://scenes/objects
 res://assets/objects
 res://assets/animateddoor
 res://assets/ghosts/Ghost1/Walk

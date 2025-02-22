@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cniqf3s26m1oj"]
+[gd_scene load_steps=4 format=3 uid="uid://bcsuka7nmror0"]
 
 [ext_resource type="Script" path="res://scenes/minigames/cleansing.gd" id="1_i76of"]
-[ext_resource type="PackedScene" uid="uid://bqaiokyhlritr" path="res://scenes/ghosts/ghost_static.tscn" id="2_0i8xd"]
+[ext_resource type="PackedScene" uid="uid://cco57upfppwpk" path="res://scenes/ghosts/ghost_static.tscn" id="2_0i8xd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bpx3j"]
 size = Vector2(58, 39)
@@ -24,6 +24,13 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CleanseArea"]
 position = Vector2(0, -13)
 shape = SubResource("RectangleShape2D_bpx3j")
+
+[node name="CleanseAreaLabel" type="Label" parent="."]
+offset_left = 22.0
+offset_top = -66.0
+offset_right = 62.0
+offset_bottom = -43.0
+text = "Press E"
 
 [connection signal="body_entered" from="CleanseArea" to="." method="_on_cleanse_area_body_entered"]
 [connection signal="body_exited" from="CleanseArea" to="." method="_on_cleanse_area_body_exited"]

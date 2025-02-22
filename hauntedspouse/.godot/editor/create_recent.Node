@@ -1,3 +1,10 @@
+AudioStreamPlayer2D
+Control
+VBoxContainer
+LineEdit
+MarginContainer
+Window
+Label
 CollisionShape2D
 Area2D
 AnimatedSprite2D
@@ -5,10 +12,3 @@ DirectionalLight2D
 PointLight2D
 WorldEnvironment
 Sprite2D
-NavigationRegion2D
-Window
-Node2D
-NavigationAgent2D
-CharacterBody2D
-StaticBody2D
-Timer

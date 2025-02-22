@@ -39,7 +39,6 @@ inventory_panel = NodePath("../GameScreen/InventoryPanel")
 position = Vector2(-3.33337, -20)
 scale = Vector2(1.11111, 1.11111)
 stream = ExtResource("8_3x087")
-autoplay = true
 
 [node name="GameScreen" parent="." instance=ExtResource("7_wa2xf")]
 
