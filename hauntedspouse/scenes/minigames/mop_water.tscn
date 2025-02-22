@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://yfycy2x7h4rf"]
+
+[ext_resource type="Texture2D" uid="uid://c1y7qmrplssfm" path="res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_tilemaps.png" id="1_i6xq8"]
+[ext_resource type="PackedScene" uid="uid://8vingtb32ki5" path="res://scenes/minigames/puddle.tscn" id="2_xp0l8"]
+[ext_resource type="Script" path="res://scenes/minigames/mop_water.gd" id="3_aeqr1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icli2"]
+atlas = ExtResource("1_i6xq8")
+region = Rect2(64, 64, 32, 32)
+
+[node name="MopWater" type="Window"]
+canvas_item_default_texture_filter = 0
+physics_object_picking = true
+gui_embed_subwindows = true
+title = "Click To Mop The Water!!!"
+position = Vector2i(30, 36)
+size = Vector2i(500, 300)
+script = ExtResource("3_aeqr1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(500, 300)
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.113725, 0.0509804, 0.113725, 1)
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = SubResource("AtlasTexture_icli2")
+expand_mode = 4
+stretch_mode = 6
+flip_h = true
+
+[node name="Puddle" parent="MarginContainer" instance=ExtResource("2_xp0l8")]

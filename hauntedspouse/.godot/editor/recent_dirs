@@ -1,9 +1,13 @@
+res://scenes/minigames
+res://assets/Water+
+/home/kglw0904/Godot/HauntedSpouse/hauntedspouse/scenes/minigames
+res://assets/acursedpixel_interioroddities_assetpack_v2
+res://
 res://scenes/ghosts
 res://assets/ghosts/Ghost1/Attack
 res://assets/ghosts/Ghost1/Death
 res://assets/ghosts/Ghost1/Idle
 res://assets/ghosts/Ghost2/Attack
-res://scenes/minigames
 res://scenes/objects
 res://assets/objects
 res://assets/animateddoor
@@ -16,4 +20,3 @@ res://scenes/components
 res://scenes/ui
 res://scripts/global
 res://scenes/House/testing
-res://assets/acursedpixel_interioroddities_assetpack_v2

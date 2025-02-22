@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://o5ueq3ti1v4y"]
+[gd_scene load_steps=12 format=3 uid="uid://o5ueq3ti1v4y"]
 
 [ext_resource type="PackedScene" uid="uid://c8bn8tdguq2sf" path="res://scenes/House/foyer.tscn" id="1_hbyln"]
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_ob757"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://c1kelkpko4u7c" path="res://assets/music/Game Jam Overworld Theme wav.wav" id="8_3x087"]
 [ext_resource type="PackedScene" uid="uid://gc8s3hrwbn8g" path="res://scenes/House/parlor.tscn" id="9_ews1l"]
 [ext_resource type="PackedScene" uid="uid://txr366fe71hs" path="res://scenes/kylin.tscn" id="10_fevop"]
+[ext_resource type="PackedScene" uid="uid://d32nax2mxknou" path="res://scenes/House/bathroom_first_floor.tscn" id="11_javl4"]
 
 [node name="TestFirstFloor" type="Node2D"]
 y_sort_enabled = true
@@ -29,6 +30,9 @@ position = Vector2(-121, 182)
 
 [node name="Kitchen" parent="." instance=ExtResource("3_jr5kc")]
 position = Vector2(-601, 182)
+
+[node name="Bathroom_first_floor" parent="." instance=ExtResource("11_javl4")]
+position = Vector2(145, -25)
 
 [node name="Player" parent="." node_paths=PackedStringArray("task_panel", "inventory_panel") instance=ExtResource("6_mjk2y")]
 position = Vector2(378, 359)
