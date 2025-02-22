@@ -1,5 +1,5 @@
-res://scenes/House/house_tile_set.tres
 res://scenes/player.tscn
+res://scenes/House/house_tile_set.tres
 res://scenes/House/houselayers.tscn
 res://scenes/House/bathroom.tscn
 res://scenes/House/kitchen.tscn
@@ -28,12 +28,6 @@ res://scenes/minigames/moving_fires_screen.tscn
 res://scenes/minigames/put_out_fire.tscn
 res://scenes/minigames/cleansing.tscn
 res://scenes/minigames/organize_books.tscn
-res://scenes/minigames/organize_books.gd
-res://scenes/ghosts/ghost_static.tscn
 res://scenes/ghosts/ghost_enters_object.tscn
-res://scenes/ghosts/ghost_enters_object.gd
-res://scenes/House/kitchen.gd
-res://scenes/components/collectible_component.gd
+res://scenes/ghosts/ghost_static.tscn
 res://scenes/objects/pickup_sound.tscn
-res://scripts/global/inventory_manager.gd
-res://default_bus_layout.tres
