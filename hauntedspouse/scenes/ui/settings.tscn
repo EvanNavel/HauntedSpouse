@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg2fp1pv5xr7r"]
+[gd_scene load_steps=5 format=3 uid="uid://cg2fp1pv5xr7r"]
 
 [ext_resource type="Script" path="res://scenes/ui/settings.gd" id="1_uef56"]
 [ext_resource type="Texture2D" uid="uid://dn71rn020ef8v" path="res://assets/air male big.png" id="2_hyokw"]
 [ext_resource type="Script" path="res://scenes/ui/title_animation.gd" id="3_miene"]
+[ext_resource type="Texture2D" uid="uid://bik6pblu0cvmq" path="res://assets/ui/title_ghost_5.png" id="4_c2sv2"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,6 +13,7 @@ offset_bottom = 40.0
 script = ExtResource("1_uef56")
 
 [node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = -102.0
 offset_top = -64.0
 offset_right = 1092.0
@@ -28,6 +30,11 @@ scale = Vector2(2.02994, 2.06294)
 text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(151, 286)
+texture = ExtResource("2_hyokw")
+script = ExtResource("3_miene")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -51,7 +58,9 @@ text = "Mute Volume"
 layout_mode = 2
 text = "Back"
 
-[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
-position = Vector2(-125, -55)
-texture = ExtResource("2_hyokw")
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(793, 302)
+rotation = -0.342847
+scale = Vector2(2.60199, 2.65302)
+texture = ExtResource("4_c2sv2")
 script = ExtResource("3_miene")

@@ -54,11 +54,10 @@ offset_right = -337.84
 offset_bottom = -269.8
 texture = ExtResource("1_dnw6o")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(280, 192)
-rotation = 0.0195256
-scale = Vector2(1.73008, 1.79835)
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(288, 192)
+rotation = 0.0581425
+scale = Vector2(1.55607, 1.65614)
 texture = ExtResource("3_t0qen")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
