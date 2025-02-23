@@ -2,7 +2,7 @@ extends Sprite2D
 
 @onready var start_position = position
 @onready var end_position = start_position + Vector2(0, 20)
-var duration = 2.0
+var duration = 2.5
 
 func _ready():
 	animate_ghost()

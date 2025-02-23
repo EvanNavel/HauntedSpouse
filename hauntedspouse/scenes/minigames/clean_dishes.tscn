@@ -37,16 +37,16 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 texture = SubResource("AtlasTexture_e3xdu")
 
-[node name="Plate" parent="MarginContainer" node_paths=PackedStringArray("shmoo") instance=ExtResource("3_sahu2")]
-shmoo = NodePath("../Shmoo")
+[node name="Plate" parent="MarginContainer" instance=ExtResource("3_sahu2")]
+script = null
 
-[node name="Plate2" parent="MarginContainer" node_paths=PackedStringArray("shmoo") instance=ExtResource("3_sahu2")]
+[node name="Plate2" parent="MarginContainer" instance=ExtResource("3_sahu2")]
 position = Vector2(277, 200)
-shmoo = NodePath("../Shmoo3")
+script = null
 
-[node name="Plate3" parent="MarginContainer" node_paths=PackedStringArray("shmoo") instance=ExtResource("3_sahu2")]
+[node name="Plate3" parent="MarginContainer" instance=ExtResource("3_sahu2")]
 position = Vector2(377, 77)
-shmoo = NodePath("../Shmoo2")
+script = null
 
 [node name="Shmoo" parent="MarginContainer" instance=ExtResource("4_gmi4o")]
 position = Vector2(115, 115)

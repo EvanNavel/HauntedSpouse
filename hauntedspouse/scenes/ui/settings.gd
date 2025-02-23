@@ -16,7 +16,5 @@ func _toggle_sound():
 	AudioServer.set_bus_mute(0, not AudioServer.is_bus_mute(0)) 
 
 func _go_back():
-	if GlobalSettings.previous_scene == "pause":
-		get_tree().change_scene_to_file("res://scenes/ui/pause_screen.tscn")  # Go back to pause
-	else:
-		get_tree().change_scene_to_file("res://scenes/ui/title_screen.tscn")  # Go back to title
+
+		get_tree().change_scene_to_file("res://scenes/ui/title_screen.tscn")
