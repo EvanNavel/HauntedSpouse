@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740200015
+::res://::1740280421
 default_bus_layout.tres::AudioBusLayout::1930458192834692809::1740119149::0::1::::<><>::
 icon.svg::CompressedTexture2D::4995622827062143149::1739754070::1740196315::1::::<><>::
 ::res://assets/::1740200015
@@ -150,7 +150,7 @@ player_up.png::CompressedTexture2D::7394811084666164347::1740119149::1740196315:
 Time & weather.png::CompressedTexture2D::6450516843483752556::1740119149::1740196315::1::::<><>::
 UI books & more.png::CompressedTexture2D::5383463706559575450::1740119149::1740196315::1::::<><>::
 UI cooking.png::CompressedTexture2D::620224142703606134::1740119149::1740196315::1::::<><>::
-::res://assets/Water+/::1740202821
+::res://assets/Water+/::1740202822
 Screenshot 2025-02-21 233952.png::CompressedTexture2D::1206224222031965664::1740202793::1740202822::1::::<><>::
 Water+.png::CompressedTexture2D::2192271842987710281::1740199944::1740200488::1::::<><>::
 ::res://scenes/::1740196379
@@ -166,10 +166,11 @@ interactible_component.tscn::PackedScene::8184318632774019228::1740119149::0::1:
 ghost.gd::GDScript::-1::1740119149::0::1::::Ghost<>CharacterBody2D<>::
 ghost.tscn::PackedScene::5050811043764114905::1740196380::0::1::::<><>::uid://dg4iw4fdhd33a::::res://assets/ghosts/Ghost1/Walk/Ghost1_Walk_full.png<>res://scenes/ghosts/ghost.gd<>uid://cajy4ed4iwcgj::::res://assets/ghosts/Ghost1/Walk/Ghost1_Walk_shadow.png<>uid://ctirkvbl8xlty::::res://assets/ghosts/Ghost1/Attack/Ghost1_Attack_full.png<>uid://cs14bl36misim::::res://assets/ghosts/Ghost1/Attack/Ghost1_Attack_shade.png<>uid://doussdfe82hcu::::res://scenes/components/interactible_component.tscn<>uid://bxqei5b2lpvxf::::res://assets/ghosts/Ghost1/Death/Ghost1_Death_full.png<>uid://ds0mwh0ww2kg3::::res://assets/ghosts/Ghost1/Idle/Ghost1_Idle_full.png
 ghost_static.tscn::PackedScene::3509953481600652623::1740196380::0::1::::<><>::uid://ctirkvbl8xlty::::res://assets/ghosts/Ghost1/Attack/Ghost1_Attack_full.png<>uid://cs14bl36misim::::res://assets/ghosts/Ghost1/Attack/Ghost1_Attack_shade.png<>uid://bxqei5b2lpvxf::::res://assets/ghosts/Ghost1/Death/Ghost1_Death_full.png<>uid://ds0mwh0ww2kg3::::res://assets/ghosts/Ghost1/Idle/Ghost1_Idle_full.png<>uid://dg4iw4fdhd33a::::res://assets/ghosts/Ghost1/Walk/Ghost1_Walk_full.png<>uid://cajy4ed4iwcgj::::res://assets/ghosts/Ghost1/Walk/Ghost1_Walk_shadow.png
-::res://scenes/House/::1740200533
-bathroom.tscn::PackedScene::6140471588533332008::1740196379::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres
-bathroom_first_floor.tscn::PackedScene::9181078443532929828::1740199952::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>uid://cd7wecw3juqdd::::res://scenes/ghosts/ghost.tscn
-dining_room.tscn::PackedScene::4538789486852289067::1740199952::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>uid://cuhh3dw713ck2::::res://scenes/objects/fire_extinguisher.tscn<>uid://cd7wecw3juqdd::::res://scenes/ghosts/ghost.tscn<>uid://c338fjvxpplk4::::res://scenes/objects/fire.tscn
+::res://scenes/House/::1740210974
+bathroom.tscn::PackedScene::6140471588533332008::1740210974::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres
+bathroom_first_floor.gd::GDScript::-1::1740210970::0::1::::<>Node2D<>::
+bathroom_first_floor.tscn::PackedScene::9181078443532929828::1740210974::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>res://scenes/House/bathroom_first_floor.gd<>uid://cd7wecw3juqdd::::res://scenes/ghosts/ghost.tscn<>uid://yfycy2x7h4rf::::res://scenes/minigames/mop_water.tscn
+dining_room.tscn::PackedScene::4538789486852289067::1740210974::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>uid://cuhh3dw713ck2::::res://scenes/objects/fire_extinguisher.tscn<>uid://cd7wecw3juqdd::::res://scenes/ghosts/ghost.tscn<>uid://c338fjvxpplk4::::res://scenes/objects/fire.tscn
 door.gd::GDScript::-1::1740119149::0::1::::<>StaticBody2D<>::
 door.tscn::PackedScene::7615237154332180703::1740119180::0::1::::<><>::res://scenes/House/door.gd<>uid://b2go3atit1gee::::res://assets/animateddoor/door_animation.png<>uid://x5skntf5qp3a::::res://assets/animateddoor/door_animation_clear.png<>uid://doussdfe82hcu::::res://scenes/components/interactible_component.tscn
 firearea.gd::GDScript::-1::1740119180::0::1::::<>Area2D<>::
@@ -177,36 +178,37 @@ first_floor_door.gd::GDScript::-1::1740119149::0::1::::<>StaticBody2D<>::
 first_floor_door.tscn::PackedScene::1211133088366562598::1740119149::0::1::::<><>::uid://b2go3atit1gee::::res://assets/animateddoor/door_animation.png<>res://scenes/House/first_floor_door.gd<>uid://doussdfe82hcu::::res://scenes/components/interactible_component.tscn
 foyer.tscn::PackedScene::7091986840178222101::1740196380::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>uid://dk5b4sfx1wqx4::::res://scenes/objects/first_floor_key.tscn<>uid://dgq43w5ku6xtf::::res://scenes/House/door.tscn<>uid://rixgj45noju1::::res://scenes/House/first_floor_door.tscn<>uid://cd7wecw3juqdd::::res://scenes/ghosts/ghost.tscn<>uid://dsatgc3mhrr8u::::res://scenes/objects/clock.tscn
 houselayers.tscn::PackedScene::483378186188003944::1740196379::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>uid://d0cdx7weekfyd::::res://scenes/player.tscn
-house_tile_set.tres::TileSet::7148517962247108127::1740200533::0::1::::<><>::uid://c1y7qmrplssfm::::res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_tilemaps.png<>uid://kxeekynmt88i::::res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_objects.png<>uid://6h7nq5cyieur::::res://assets/Water+/Water+.png
+house_tile_set.tres::TileSet::7148517962247108127::1740203772::0::1::::<><>::uid://c1y7qmrplssfm::::res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_tilemaps.png<>uid://kxeekynmt88i::::res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_objects.png<>uid://6h7nq5cyieur::::res://assets/Water+/Water+.png<>uid://rgklph4oftmu::::res://assets/Water+/Screenshot 2025-02-21 233952.png
 kitchen.gd::GDScript::-1::1740119180::0::1::::<>Node2D<>::
-kitchen.tscn::PackedScene::4020917854240843060::1740199952::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>res://scenes/House/kitchen.gd<>uid://c8nfypojvlh3e::::res://scenes/minigames/clean_dishes.tscn<>uid://bw1onc65swr5y::::res://scenes/minigames/organize_table.tscn<>uid://01p8k60we340::::res://scenes/objects/mop.tscn<>uid://8ce7nx80ou04::::res://scenes/minigames/put_out_fire.tscn<>uid://c338fjvxpplk4::::res://scenes/objects/fire.tscn<>uid://cniqf3s26m1oj::::res://scenes/minigames/cleansing.tscn<>uid://cd7wecw3juqdd::::res://scenes/ghosts/ghost.tscn
+kitchen.tscn::PackedScene::4020917854240843060::1740210090::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>res://scenes/House/kitchen.gd<>uid://c8nfypojvlh3e::::res://scenes/minigames/clean_dishes.tscn<>uid://bw1onc65swr5y::::res://scenes/minigames/organize_table.tscn<>uid://01p8k60we340::::res://scenes/objects/mop.tscn<>uid://8ce7nx80ou04::::res://scenes/minigames/put_out_fire.tscn<>uid://c338fjvxpplk4::::res://scenes/objects/fire.tscn<>uid://cniqf3s26m1oj::::res://scenes/minigames/cleansing.tscn<>uid://cd7wecw3juqdd::::res://scenes/ghosts/ghost.tscn
 master_bedroom.tscn::PackedScene::4091868379714641555::1740196380::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>uid://d0cdx7weekfyd::::res://scenes/player.tscn
 parlor.tscn::PackedScene::427299104657187300::1740119180::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>uid://cd7wecw3juqdd::::res://scenes/ghosts/ghost.tscn<>uid://c338fjvxpplk4::::res://scenes/objects/fire.tscn
 study.tscn::PackedScene::4584140351396129569::1740196380::0::1::::<><>::uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>uid://duu2nv5tlm5yb::::res://scenes/objects/cleansing_book.tscn<>uid://c338fjvxpplk4::::res://scenes/objects/fire.tscn
-::res://scenes/House/testing/::1740199952
-test_first_floor.tscn::PackedScene::1045797511088332406::1740199952::0::1::::<><>::uid://c8bn8tdguq2sf::::res://scenes/House/foyer.tscn<>uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>uid://b6kuee3wdyte4::::res://scenes/House/study.tscn<>uid://bxj06uu3pxl4g::::res://scenes/House/kitchen.tscn<>uid://b5wvg146b3ihn::::res://scenes/House/dining_room.tscn<>uid://d0cdx7weekfyd::::res://scenes/player.tscn<>uid://d31egc2sj82um::::res://scenes/ui/game_screen.tscn<>uid://c1kelkpko4u7c::::res://assets/music/Game Jam Overworld Theme wav.wav<>uid://gc8s3hrwbn8g::::res://scenes/House/parlor.tscn<>uid://txr366fe71hs::::res://scenes/kylin.tscn<>uid://d32nax2mxknou::::res://scenes/House/bathroom_first_floor.tscn
-::res://scenes/minigames/::1740202503
+::res://scenes/House/testing/::1740210974
+test_first_floor.tscn::PackedScene::1045797511088332406::1740210974::0::1::::<><>::uid://c8bn8tdguq2sf::::res://scenes/House/foyer.tscn<>uid://c832btw0vg02f::::res://scenes/House/house_tile_set.tres<>uid://b6kuee3wdyte4::::res://scenes/House/study.tscn<>uid://bxj06uu3pxl4g::::res://scenes/House/kitchen.tscn<>uid://b5wvg146b3ihn::::res://scenes/House/dining_room.tscn<>uid://d0cdx7weekfyd::::res://scenes/player.tscn<>uid://d31egc2sj82um::::res://scenes/ui/game_screen.tscn<>uid://c1kelkpko4u7c::::res://assets/music/Game Jam Overworld Theme wav.wav<>uid://gc8s3hrwbn8g::::res://scenes/House/parlor.tscn<>uid://txr366fe71hs::::res://scenes/kylin.tscn<>uid://d32nax2mxknou::::res://scenes/House/bathroom_first_floor.tscn
+::res://scenes/minigames/::1740210974
 cleansing.gd::GDScript::-1::1740119180::0::1::::<>Node2D<>::
-cleansing.tscn::PackedScene::5702793257295857789::1740199952::0::1::::<><>::res://scenes/minigames/cleansing.gd<>uid://bqaiokyhlritr::::res://scenes/ghosts/ghost_static.tscn
+cleansing.tscn::PackedScene::5702793257295857789::1740210974::0::1::::<><>::res://scenes/minigames/cleansing.gd<>uid://bqaiokyhlritr::::res://scenes/ghosts/ghost_static.tscn
 clean_dishes.gd::GDScript::-1::1740119149::0::1::::<>Window<>::
-clean_dishes.tscn::PackedScene::7116257372176534944::1740199952::0::1::::<><>::uid://kxeekynmt88i::::res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_objects.png<>res://scenes/minigames/clean_dishes.gd<>uid://gpalqn764q6c::::res://scenes/minigames/plate.tscn<>uid://b4dpn5ci2r2km::::res://scenes/objects/shmoo.tscn
-mop_water.gd::GDScript::-1::1740202406::0::1::::<>Node<>::
-mop_water.tscn::PackedScene::1696316218855490451::1740202406::0::1::::<><>::uid://c1y7qmrplssfm::::res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_tilemaps.png<>uid://6h7nq5cyieur::::res://assets/Water+/Water+.png
+clean_dishes.tscn::PackedScene::7116257372176534944::1740210974::0::1::::<><>::uid://kxeekynmt88i::::res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_objects.png<>res://scenes/minigames/clean_dishes.gd<>uid://gpalqn764q6c::::res://scenes/minigames/plate.tscn<>uid://b4dpn5ci2r2km::::res://scenes/objects/shmoo.tscn
+mop_water.gd::GDScript::-1::1740205635::0::1::::<>Window<>::
+mop_water.tscn::PackedScene::1696316218855490451::1740210974::0::1::::<><>::uid://c1y7qmrplssfm::::res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_tilemaps.png<>uid://8vingtb32ki5::::res://scenes/minigames/puddle.tscn<>res://scenes/minigames/mop_water.gd
 moveable_area.gd::GDScript::-1::1740119149::0::1::::MoveableArea<>Area2D<>::
 moving_fires_screen.gd::GDScript::-1::1740119180::0::1::::<>Node2D<>::
 moving_fires_screen.tscn::PackedScene::4283588971021744256::1740119180::0::1::::<><>::res://scenes/minigames/moving_fires_screen.gd<>uid://t2x4itt4y165::::res://scenes/objects/fire_moving.tscn
 organize_table.gd::GDScript::-1::1740119149::0::1::::<>Window<>::
 organize_table.tscn::PackedScene::3985122472878501160::1740196380::0::1::::<><>::res://scenes/minigames/organize_table.gd<>uid://kxeekynmt88i::::res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_objects.png<>uid://b5764i6cd7hgt::::res://scenes/minigames/plate_moveable.tscn
 plate.gd::GDScript::-1::1740119180::0::1::::<>Sprite2D<>::
-plate.tscn::PackedScene::452119233824623864::1740196380::0::1::::<><>::uid://cf0fmqyjgbeix::::res://assets/test_plate.png<>res://scenes/minigames/plate.gd
-plate_area.gd::GDScript::-1::1740119180::0::1::::<>RefCounted<>::
+plate.tscn::PackedScene::452119233824623864::1740210974::0::1::::<><>::uid://cf0fmqyjgbeix::::res://assets/test_plate.png<>res://scenes/minigames/plate.gd
+plate_area.gd::GDScript::-1::1740208267::0::1::::<>RefCounted<>::
 plate_moveable.gd::GDScript::-1::1740119149::0::1::::<>RefCounted<>::
-plate_moveable.tscn::PackedScene::4560080563934871723::1740119149::0::1::::<><>::uid://cf0fmqyjgbeix::::res://assets/test_plate.png<>res://scenes/minigames/moveable_area.gd
+plate_moveable.tscn::PackedScene::4560080563934871723::1740210974::0::1::::<><>::uid://cf0fmqyjgbeix::::res://assets/test_plate.png<>res://scenes/minigames/moveable_area.gd
+puddle.gd::GDScript::-1::1740209671::0::1::::<>Sprite2D<>::
+puddle.tscn::PackedScene::2360093068728529998::1740210974::0::1::::<><>::uid://rgklph4oftmu::::res://assets/Water+/Screenshot 2025-02-21 233952.png<>res://scenes/minigames/puddle.gd
+puddle_area.gd::GDScript::-1::1740207283::0::1::::<>RefCounted<>::
 put_out_fire.gd::GDScript::-1::1740119180::0::1::::<>Node2D<>::
-put_out_fire.tscn::PackedScene::2320661328806615839::1740196381::0::1::::<><>::res://scenes/minigames/put_out_fire.gd<>uid://b2bac4xxfn6i3::::res://scenes/minigames/moving_fires_screen.tscn
-puddle.tscn::PackedScene::2360093068728529998::1740202485::0::1::::<><>::
-puddle.gd::GDScript::-1::1740202503::0::1::::<>Node<>::
-::res://scenes/objects/::1740196380
+put_out_fire.tscn::PackedScene::2320661328806615839::1740203106::0::1::::<><>::res://scenes/minigames/put_out_fire.gd<>uid://b2bac4xxfn6i3::::res://scenes/minigames/moving_fires_screen.tscn
+::res://scenes/objects/::1740210974
 cleansing_book.tscn::PackedScene::8605990203259569945::1740119149::0::1::::<><>::uid://chntvpdsudyn8::::res://assets/test_cleansing_book.png<>uid://ysotjh8vegfv::::res://scenes/components/collectible_component.tscn
 clock.tscn::PackedScene::8423825723046370610::1740119180::0::1::::<><>::uid://g3iw6x8yuvac::::res://assets/objects/clock.png
 fire.tscn::PackedScene::6797944662312306853::1740119180::0::1::::<><>::uid://h1wvuqgdllm2::::res://assets/objects/fire.png
@@ -217,7 +219,7 @@ fire_moving.tscn::PackedScene::1390774957780186196::1740119180::0::1::::<><>::ui
 first_floor_key.gd::GDScript::-1::1740119180::0::1::::<>Sprite2D<>::
 first_floor_key.tscn::PackedScene::7923195279322396891::1740196380::0::1::::<><>::uid://jjctuseq4pj3::::res://assets/keys.png<>res://scenes/objects/first_floor_key.gd<>uid://ysotjh8vegfv::::res://scenes/components/collectible_component.tscn
 mop.tscn::PackedScene::1809365172934636227::1740119149::0::1::::<><>::uid://c8h1m2y3k73vx::::res://assets/test_mop.png<>uid://ysotjh8vegfv::::res://scenes/components/collectible_component.tscn
-shmoo.tscn::PackedScene::4429025831860857476::1740196380::0::1::::<><>::uid://dtftw3ve4duek::::res://assets/shmoo.png
+shmoo.tscn::PackedScene::4429025831860857476::1740210974::0::1::::<><>::uid://dtftw3ve4duek::::res://assets/shmoo.png
 ::res://scenes/ui/::1740119180
 game_manager.gd::GDScript::-1::1740119149::0::1::::<>Node<>::
 game_manager.tscn::PackedScene::798037315197777087::1740119149::0::1::::<><>::

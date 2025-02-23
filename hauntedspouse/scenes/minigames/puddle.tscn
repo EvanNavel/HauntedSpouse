@@ -14,7 +14,6 @@ script = ExtResource("2_vw781")
 puddle = NodePath(".")
 
 [node name="Puddle_area" type="Area2D" parent="."]
-scale = Vector2(1, 1)
 collision_layer = 4
 collision_mask = 4
 

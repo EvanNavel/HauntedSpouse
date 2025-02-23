@@ -49,3 +49,6 @@ navigation_polygon = SubResource("NavigationPolygon_ty8gf")
 
 [node name="Fire" parent="." instance=ExtResource("4_jpvwv")]
 position = Vector2(128, 7)
+
+[node name="Ghost2" parent="." instance=ExtResource("3_qmqe6")]
+position = Vector2(53, 94)

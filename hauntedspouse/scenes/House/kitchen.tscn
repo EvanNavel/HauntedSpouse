@@ -117,16 +117,16 @@ visible = false
 position = Vector2(58, 103)
 
 [node name="Ghost" parent="." instance=ExtResource("9_3sgd7")]
-position = Vector2(159, 118)
+position = Vector2(78, 37)
 
 [node name="Ghost3" parent="." instance=ExtResource("9_3sgd7")]
-position = Vector2(477, 354)
+position = Vector2(326, 140)
 
 [node name="Ghost2" parent="." instance=ExtResource("9_3sgd7")]
-position = Vector2(318, 236)
+position = Vector2(77, 133)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-position = Vector2(-3, 1)
+position = Vector2(-11, 1)
 navigation_polygon = SubResource("NavigationPolygon_q5iaq")
 
 [connection signal="body_entered" from="SinkArea" to="." method="_on_sink_area_body_entered"]
