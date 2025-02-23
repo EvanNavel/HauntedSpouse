@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dgq43w5ku6xtf" path="res://scenes/House/door.tscn" id="3_vov7p"]
 [ext_resource type="PackedScene" uid="uid://rixgj45noju1" path="res://scenes/House/first_floor_door.tscn" id="4_geikl"]
 [ext_resource type="PackedScene" uid="uid://cd7wecw3juqdd" path="res://scenes/ghosts/ghost.tscn" id="5_lyj4u"]
-[ext_resource type="PackedScene" path="res://scenes/objects/clock.tscn" id="6_vf1ld"]
+[ext_resource type="PackedScene" uid="uid://dsatgc3mhrr8u" path="res://scenes/objects/clock.tscn" id="6_vf1ld"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_nq1mg"]
 vertices = PackedVector2Array(395.938, 16.9375, 395.047, 177.039, 17, 178.938, 17, 15.0469)

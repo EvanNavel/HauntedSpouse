@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://kxeekynmt88i" path="res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_objects.png" id="1_0n6py"]
 [ext_resource type="Script" path="res://scenes/minigames/clean_dishes.gd" id="1_6ip3b"]
 [ext_resource type="PackedScene" uid="uid://gpalqn764q6c" path="res://scenes/minigames/plate.tscn" id="3_sahu2"]
-[ext_resource type="PackedScene" path="res://scenes/objects/shmoo.tscn" id="4_gmi4o"]
+[ext_resource type="PackedScene" uid="uid://b4dpn5ci2r2km" path="res://scenes/objects/shmoo.tscn" id="4_gmi4o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3xdu"]
 atlas = ExtResource("1_0n6py")

@@ -1,8 +1,9 @@
+MarginContainer
+PanelContainer
 AudioStreamPlayer2D
 Control
 VBoxContainer
 LineEdit
-MarginContainer
 Window
 Label
 CollisionShape2D
@@ -11,4 +12,3 @@ AnimatedSprite2D
 DirectionalLight2D
 PointLight2D
 WorldEnvironment
-Sprite2D

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d31egc2sj82um"]
+[gd_scene load_steps=4 format=3 uid="uid://d31egc2sj82um"]
 
 [ext_resource type="PackedScene" uid="uid://cxmbi20h60tp3" path="res://scenes/ui/task_panel.tscn" id="1_t3yjw"]
 [ext_resource type="PackedScene" uid="uid://dcuymj6kvo5op" path="res://scenes/ui/inventory_panel.tscn" id="2_1grb4"]
+[ext_resource type="PackedScene" uid="uid://12y6rjg01tss" path="res://scenes/ui/pause_screen.tscn" id="2_wr41y"]
 
 [node name="GameScreen" type="CanvasLayer"]
 
@@ -15,6 +16,12 @@ offset_right = 959.0
 offset_bottom = 538.0
 size_flags_horizontal = 8
 size_flags_vertical = 8
+
+[node name="Control" parent="." instance=ExtResource("2_wr41y")]
+offset_left = 317.0
+offset_top = 148.0
+offset_right = 637.0
+offset_bottom = 358.0
 
 [node name="InventoryPanel" parent="." instance=ExtResource("2_1grb4")]
 offset_top = -75.0

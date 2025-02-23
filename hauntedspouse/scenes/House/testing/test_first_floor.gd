@@ -7,9 +7,7 @@ func _ready():
 	pause_menu.hide()
 
 func _input(event):
-	if event.is_action_pressed("pause"):
-		if get_tree().paused:
-			pause_menu._on_resume_pressed()
-		else:
-			pause_menu.show_pause_menu()
-			
+	if event.is_action_pressed("escape") and get_tree().paused == false:
+		pause_menu.show_pause_menu()
+	
+		

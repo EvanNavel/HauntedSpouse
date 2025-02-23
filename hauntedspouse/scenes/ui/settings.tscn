@@ -30,13 +30,20 @@ offset_right = -233.0
 offset_bottom = -85.0
 
 [node name="fullscreen_button" type="Button" parent="VBoxContainer"]
+process_mode = 3
 layout_mode = 2
 text = "Toggle Fullscreen"
 
 [node name="volume_button" type="Button" parent="VBoxContainer"]
+process_mode = 3
 layout_mode = 2
 text = "Mute Volume"
 
 [node name="back_button" type="Button" parent="VBoxContainer"]
+process_mode = 3
 layout_mode = 2
 text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/fullscreen_button" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/volume_button" to="." method="_on_volume_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/back_button" to="." method="_on_back_button_pressed"]
