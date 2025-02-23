@@ -15,10 +15,10 @@ var scared: bool = false
 
 func _ready() -> void:
 	if task_panel:
-		task_panel.visible = false
+		task_panel.visible = true
 
 	if inventory_panel:
-		inventory_panel.visible = false
+		inventory_panel.visible = true
 
 func _physics_process(_delta: float) -> void:
 	#toggle for task panel

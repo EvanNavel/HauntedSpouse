@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3m32fqshgj6b"]
+
+[ext_resource type="Script" path="res://scenes/minigames/moving_fires_screen.gd" id="1_bva71"]
+[ext_resource type="PackedScene" path="res://scenes/objects/fire_moving.tscn" id="1_nkl78"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_hf0m5"]
+vertices = PackedVector2Array(662.852, 23.9609, 659.133, 288.93, 27.0703, 285.063, 28.9219, 22.0313)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(19, 12, 17, 295, 669, 299, 673, 14)])
+
+[node name="MovingFiresScreen" type="Node2D"]
+script = ExtResource("1_bva71")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_hf0m5")
+
+[node name="FireMoving" parent="." node_paths=PackedStringArray("screen_manager") instance=ExtResource("1_nkl78")]
+position = Vector2(69, 74)
+screen_manager = NodePath("..")
+
+[node name="FireMoving2" parent="." node_paths=PackedStringArray("screen_manager") instance=ExtResource("1_nkl78")]
+position = Vector2(286, 129)
+scale = Vector2(3, 3)
+screen_manager = NodePath("..")
+
+[node name="FireMoving3" parent="." node_paths=PackedStringArray("screen_manager") instance=ExtResource("1_nkl78")]
+position = Vector2(552, 94)
+scale = Vector2(2, 2)
+screen_manager = NodePath("..")
+
+[node name="FireMoving5" parent="." node_paths=PackedStringArray("screen_manager") instance=ExtResource("1_nkl78")]
+position = Vector2(513, 211)
+scale = Vector2(2, 2)
+screen_manager = NodePath("..")
+
+[node name="FireMoving4" parent="." node_paths=PackedStringArray("screen_manager") instance=ExtResource("1_nkl78")]
+position = Vector2(128, 230)
+scale = Vector2(5, 5)
+screen_manager = NodePath("..")

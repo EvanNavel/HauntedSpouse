@@ -1,14 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dk5b4sfx1wqx4"]
+[gd_scene load_steps=6 format=3 uid="uid://dk5b4sfx1wqx4"]
 
-[ext_resource type="Texture2D" uid="uid://cqvqxnqq2lq4w" path="res://assets/test_key_first_floor.png" id="1_s74fd"]
+[ext_resource type="Texture2D" uid="uid://jjctuseq4pj3" path="res://assets/keys.png" id="1_3t18y"]
+[ext_resource type="Script" path="res://scenes/objects/first_floor_key.gd" id="2_ea6ur"]
 [ext_resource type="PackedScene" uid="uid://ysotjh8vegfv" path="res://scenes/components/collectible_component.tscn" id="2_k4ln3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfwcx"]
+atlas = ExtResource("1_3t18y")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ejgx1"]
 radius = 17.1172
 
 [node name="FirstFloorKey" type="Sprite2D"]
 position = Vector2(-1, -18)
-texture = ExtResource("1_s74fd")
+texture = SubResource("AtlasTexture_wfwcx")
+script = ExtResource("2_ea6ur")
 
 [node name="CollectibleComponent" parent="." instance=ExtResource("2_k4ln3")]
 collectible_name = "FirstFloorKey"

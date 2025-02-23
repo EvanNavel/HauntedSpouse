@@ -15,6 +15,7 @@ canvas_item_default_texture_filter = 0
 physics_object_picking = true
 physics_object_picking_sort = true
 physics_object_picking_first_only = true
+title = "Click and Drag!"
 initial_position = 1
 size = Vector2i(700, 450)
 script = ExtResource("1_cr5vw")

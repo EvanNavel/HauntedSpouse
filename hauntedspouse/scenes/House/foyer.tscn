@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://c8bn8tdguq2sf"]
+[gd_scene load_steps=8 format=4 uid="uid://c8bn8tdguq2sf"]
 
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_syb4a"]
 [ext_resource type="PackedScene" uid="uid://dk5b4sfx1wqx4" path="res://scenes/objects/first_floor_key.tscn" id="2_0qiy8"]
 [ext_resource type="PackedScene" uid="uid://dgq43w5ku6xtf" path="res://scenes/House/door.tscn" id="3_vov7p"]
 [ext_resource type="PackedScene" uid="uid://rixgj45noju1" path="res://scenes/House/first_floor_door.tscn" id="4_geikl"]
 [ext_resource type="PackedScene" uid="uid://cd7wecw3juqdd" path="res://scenes/ghosts/ghost.tscn" id="5_lyj4u"]
+[ext_resource type="PackedScene" path="res://scenes/objects/clock.tscn" id="6_vf1ld"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_nq1mg"]
 vertices = PackedVector2Array(395.938, 16.9375, 395.047, 177.039, 17, 178.938, 17, 15.0469)
@@ -27,7 +28,7 @@ tile_map_data = PackedByteArray("AAAAAP//AAAEAA0AAAABAP//AAAFAA0AAAACAP//AAAGAA0
 tile_set = ExtResource("1_syb4a")
 
 [node name="Furniture" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAABAAoAAQAGAAoAAAABAAsAAQAGAAsAAAACAAoAAQAHAAoAAAACAAsAAQAHAAsAAAADAAoAAQAEAAoAAAADAAsAAQAEAAsAAAAEAAoAAQAFAAoAAAAEAAsAAQAFAAsAAAANAP3/AQAKAAwAAAANAP7/AQAKAA0AAAANAP//AQAKAA4AAAANAAAAAQAKAA8AAAAOAP3/AQALAAwAAAAOAP7/AQALAA0AAAAOAP//AQALAA4AAAAOAAAAAQALAA8AAAABAAYAAQAQAAwAAAABAAcAAQAQAA0AAAACAAYAAQARAAwAAAACAAcAAQARAA0AAAA=")
+tile_map_data = PackedByteArray("AAABAAoAAQAGAAoAAAABAAsAAQAGAAsAAAACAAoAAQAHAAoAAAACAAsAAQAHAAsAAAADAAoAAQAEAAoAAAADAAsAAQAEAAsAAAAEAAoAAQAFAAoAAAAEAAsAAQAFAAsAAAABAAYAAQAQAAwAAAABAAcAAQAQAA0AAAACAAYAAQARAAwAAAACAAcAAQARAA0AAAA=")
 tile_set = ExtResource("1_syb4a")
 
 [node name="Curtains" type="TileMapLayer" parent="."]
@@ -59,15 +60,12 @@ navigation_polygon = SubResource("NavigationPolygon_nq1mg")
 
 [node name="Ghost" parent="." instance=ExtResource("5_lyj4u")]
 position = Vector2(72, 73)
-min_speed = 20.0
-max_speed = 30.0
 
 [node name="Ghost2" parent="." instance=ExtResource("5_lyj4u")]
 position = Vector2(336, 147)
-min_speed = 20.0
-max_speed = 30.0
 
 [node name="Ghost3" parent="." instance=ExtResource("5_lyj4u")]
 position = Vector2(258, 40)
-min_speed = 20.0
-max_speed = 30.0
+
+[node name="Clock" parent="." instance=ExtResource("6_vf1ld")]
+position = Vector2(233, 15)

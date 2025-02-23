@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8nfypojvlh3e"]
+[gd_scene load_steps=6 format=3 uid="uid://c8nfypojvlh3e"]
 
 [ext_resource type="Texture2D" uid="uid://kxeekynmt88i" path="res://assets/acursedpixel_interioroddities_assetpack_v2/acursedpixel_interioroddities_objects.png" id="1_0n6py"]
 [ext_resource type="Script" path="res://scenes/minigames/clean_dishes.gd" id="1_6ip3b"]
 [ext_resource type="PackedScene" uid="uid://gpalqn764q6c" path="res://scenes/minigames/plate.tscn" id="3_sahu2"]
+[ext_resource type="PackedScene" path="res://scenes/objects/shmoo.tscn" id="4_gmi4o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3xdu"]
 atlas = ExtResource("1_0n6py")
@@ -13,6 +14,7 @@ handle_input_locally = false
 canvas_item_default_texture_filter = 0
 physics_object_picking = true
 gui_embed_subwindows = true
+title = "Click and Scrub!!!"
 initial_position = 1
 size = Vector2i(500, 300)
 script = ExtResource("1_6ip3b")
@@ -35,10 +37,22 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 texture = SubResource("AtlasTexture_e3xdu")
 
-[node name="Plate" parent="MarginContainer" instance=ExtResource("3_sahu2")]
+[node name="Plate" parent="MarginContainer" node_paths=PackedStringArray("shmoo") instance=ExtResource("3_sahu2")]
+shmoo = NodePath("../Shmoo")
 
-[node name="Plate2" parent="MarginContainer" instance=ExtResource("3_sahu2")]
+[node name="Plate2" parent="MarginContainer" node_paths=PackedStringArray("shmoo") instance=ExtResource("3_sahu2")]
 position = Vector2(277, 200)
+shmoo = NodePath("../Shmoo3")
 
-[node name="Plate3" parent="MarginContainer" instance=ExtResource("3_sahu2")]
+[node name="Plate3" parent="MarginContainer" node_paths=PackedStringArray("shmoo") instance=ExtResource("3_sahu2")]
 position = Vector2(377, 77)
+shmoo = NodePath("../Shmoo2")
+
+[node name="Shmoo" parent="MarginContainer" instance=ExtResource("4_gmi4o")]
+position = Vector2(115, 115)
+
+[node name="Shmoo2" parent="MarginContainer" instance=ExtResource("4_gmi4o")]
+position = Vector2(370, 115)
+
+[node name="Shmoo3" parent="MarginContainer" instance=ExtResource("4_gmi4o")]
+position = Vector2(270, 220)
