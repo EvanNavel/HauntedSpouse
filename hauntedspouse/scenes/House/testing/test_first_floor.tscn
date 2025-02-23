@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://o5ueq3ti1v4y"]
+[gd_scene load_steps=13 format=3 uid="uid://o5ueq3ti1v4y"]
 
 [ext_resource type="PackedScene" uid="uid://c8bn8tdguq2sf" path="res://scenes/House/foyer.tscn" id="1_hbyln"]
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_ob757"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d31egc2sj82um" path="res://scenes/ui/game_screen.tscn" id="7_wa2xf"]
 [ext_resource type="AudioStream" uid="uid://c1kelkpko4u7c" path="res://assets/music/Game Jam Overworld Theme wav.wav" id="8_3x087"]
 [ext_resource type="PackedScene" uid="uid://gc8s3hrwbn8g" path="res://scenes/House/parlor.tscn" id="9_ews1l"]
+[ext_resource type="PackedScene" uid="uid://c2bh8ia6hs2f1" path="res://scenes/ui/textbox.tscn" id="10_asdv0"]
 [ext_resource type="PackedScene" uid="uid://txr366fe71hs" path="res://scenes/kylin.tscn" id="10_fevop"]
 
 [node name="TestFirstFloor" type="Node2D"]
@@ -44,6 +45,9 @@ stream = ExtResource("8_3x087")
 autoplay = true
 
 [node name="GameScreen" parent="." instance=ExtResource("7_wa2xf")]
+
+[node name="TextBox" parent="." node_paths=PackedStringArray("player") instance=ExtResource("10_asdv0")]
+player = NodePath("../Player")
 
 [node name="Parlor" parent="." instance=ExtResource("9_ews1l")]
 position = Vector2(488, -103)

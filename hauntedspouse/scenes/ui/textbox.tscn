@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2bh8ia6hs2f1"]
+
+[ext_resource type="Script" path="res://scenes/ui/textbox.gd" id="1_3gpbs"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 279.0
+offset_top = 313.0
+offset_right = 319.0
+offset_bottom = 353.0
+script = ExtResource("1_3gpbs")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -85.0
+offset_top = 55.0
+offset_right = 114.0
+offset_bottom = 95.0
+scale = Vector2(1.55387, 1.41771)
+color = Color(0, 0, 0, 0.717647)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -77.0
+offset_top = 63.0
+offset_right = -37.0
+offset_bottom = 86.0
+scale = Vector2(0.693963, 0.636132)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 78.0
+offset_right = 219.0
+offset_bottom = 109.0
+text = "Next"

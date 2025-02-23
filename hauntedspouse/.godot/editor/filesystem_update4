@@ -33,3 +33,5 @@ res://scenes/ui/pause_screen.gd
 res://global_settings.gd
 res://scenes/House/testing/test_first_floor.gd
 res://scenes/ui/title_animation.gd
+res://scenes/ui/textbox.tscn
+res://scenes/ui/textbox.gd

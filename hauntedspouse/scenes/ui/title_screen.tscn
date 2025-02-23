@@ -54,12 +54,11 @@ offset_right = -337.84
 offset_bottom = -269.8
 texture = ExtResource("1_dnw6o")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(8, 0)
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(296, 200)
-scale = Vector2(1.60376, 1.52609)
+z_index = 1
+position = Vector2(280, 192)
+rotation = 0.0195256
+scale = Vector2(1.73008, 1.79835)
 texture = ExtResource("3_t0qen")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
@@ -86,3 +85,6 @@ position = Vector2(248, 272)
 scale = Vector2(1.35092, 1.27702)
 texture = ExtResource("8_wqucp")
 script = ExtResource("3_vbsw7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(8, 0)

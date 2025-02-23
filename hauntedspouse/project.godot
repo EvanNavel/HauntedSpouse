@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 InventoryManager="*res://scripts/global/inventory_manager.gd"
-GlobalSettings="*res://global_settings.gd"
 PickupSound="*res://scenes/objects/pickup_sound.tscn"
 
 [display]
