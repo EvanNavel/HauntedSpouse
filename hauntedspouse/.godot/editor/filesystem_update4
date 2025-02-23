@@ -28,3 +28,7 @@ res://scenes/ui/title_screen.tscn
 res://scenes/ui/settings.tscn
 res://scenes/ui/settings.gd
 res://scenes/ui/title_screen.gd
+res://scenes/ui/pause_screen.tscn
+res://scenes/ui/pause_screen.gd
+res://global_settings.gd
+res://scenes/House/testing/test_first_floor.gd

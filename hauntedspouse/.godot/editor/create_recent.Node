@@ -1,11 +1,11 @@
+Label
 Button
 VBoxContainer
-Label
+ColorRect
 Control
 Sprite2D
 AudioStreamPlayer2D
 TextureRect
-ColorRect
 NavigationRegion2D
 Timer
 CollisionShape2D
