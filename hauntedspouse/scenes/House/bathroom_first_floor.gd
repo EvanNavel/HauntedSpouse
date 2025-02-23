@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var puddle_area: Area2D = $SinkArea
 @onready var mop_water: Window = %MopWater
-@onready var firearea: Area2D = $Firearea
+@onready var waterarea: Area2D = $Waterarea
 @onready var cleansing: Node2D = $Cleansing
 
 var tasks_done: int = 0

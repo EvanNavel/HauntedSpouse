@@ -16,8 +16,6 @@ func _process(delta: float) -> void:
 			count += 1
 			if puddle:
 				puddle.scale /= 2
-			else:
-				print("Puddle is not assigned!")
 			print(count)
 			cooldown.start()
 

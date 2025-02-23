@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://be6kxam43dobc"]
+
+[ext_resource type="Texture2D" uid="uid://rgklph4oftmu" path="res://assets/Water+/Screenshot 2025-02-21 233952.png" id="1_81gbl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jno5s"]
+radius = 183.068
+
+[node name="Puddlearea" type="Area2D"]
+position = Vector2(11, -8)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(125, -13)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(402, 265)
+texture = ExtResource("1_81gbl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(318, 179, 257, 239, 258, 298, 259, 342, 279, 371, 320, 393, 374, 392, 374, 352, 473, 354, 525, 351, 584, 276, 574, 219, 569, 189, 498, 140, 444, 138, 449, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(537, 270)
+shape = SubResource("CircleShape2D_jno5s")

@@ -1,14 +1,18 @@
-[gd_scene load_steps=6 format=4 uid="uid://d32nax2mxknou"]
+[gd_scene load_steps=8 format=4 uid="uid://d32nax2mxknou"]
 
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_fqgab"]
 [ext_resource type="Script" path="res://scenes/House/bathroom_first_floor.gd" id="2_h8dig"]
 [ext_resource type="PackedScene" uid="uid://cd7wecw3juqdd" path="res://scenes/ghosts/ghost.tscn" id="2_s3dwp"]
+[ext_resource type="Texture2D" uid="uid://rgklph4oftmu" path="res://assets/Water+/Screenshot 2025-02-21 233952.png" id="3_6tp8f"]
 [ext_resource type="PackedScene" uid="uid://yfycy2x7h4rf" path="res://scenes/minigames/mop_water.tscn" id="4_gkvsl"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jadm"]
+size = Vector2(33, 22)
+
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_wpg3w"]
-vertices = PackedVector2Array(17.1719, 14.9375, 192.844, 14.0469, 192.141, 61.3984, 121.219, 64.3984, 18.8203, 108.828, 120.219, 107.148)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(7, 5, 9, 119, 130, 117, 131, 74, 202, 71, 203, 4)])
+vertices = PackedVector2Array(120.219, 107.148, 18.7422, 108.828, 16.2578, 11, 58.0312, 11, 121.219, 64.3984, 192, 10.0625, 192, 61.4062)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(4, 3, 5, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(6, 1, 9, 119, 130, 117, 131, 74, 202, 71, 202, 0, 58, 1)])
 
 [node name="Bathroom_first_floor" type="Node2D"]
 
@@ -34,20 +38,67 @@ tile_set = ExtResource("1_fqgab")
 
 [node name="Furniture2" type="TileMapLayer" parent="."]
 position = Vector2(7, 27)
-tile_map_data = PackedByteArray("AAALAAgAAgAAAA0AAAAIAAMAAgAAAA0AAAAPAAQAAgAAAA0AAAALAAMAAgAAAA0AAAARAAQAAgAIAAwAAAAPAP//AgAIAAwAAAAJAP//AgAIAAwAAAANAAgAAgAIAAwAAAA=")
+tile_map_data = PackedByteArray("AAARAAQAAgAIAAwAAAAPAP//AgAIAAwAAAAJAP//AgAIAAwAAAANAAgAAgAIAAwAAAA=")
 tile_set = ExtResource("1_fqgab")
 
 [node name="Doors" type="TileMapLayer" parent="."]
 tile_set = ExtResource("1_fqgab")
 
+[node name="puddlearea" type="Area2D" parent="."]
+
+[node name="puddle" type="StaticBody2D" parent="puddlearea"]
+position = Vector2(163, 115)
+scale = Vector2(0.065, 0.065)
+
+[node name="Sprite2D" type="Sprite2D" parent="puddlearea/puddle"]
+position = Vector2(402, 265)
+texture = ExtResource("3_6tp8f")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="puddlearea/puddle"]
+polygon = PackedVector2Array(318, 179, 257, 239, 258, 298, 259, 342, 279, 371, 320, 393, 374, 392, 374, 352, 473, 354, 525, 351, 584, 276, 574, 219, 569, 189, 498, 140, 444, 138, 449, 180)
+
+[node name="puddle3" type="StaticBody2D" parent="puddlearea"]
+position = Vector2(104, 63)
+scale = Vector2(0.075, 0.075)
+
+[node name="Sprite2D" type="Sprite2D" parent="puddlearea/puddle3"]
+position = Vector2(402, 265)
+texture = ExtResource("3_6tp8f")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="puddlearea/puddle3"]
+polygon = PackedVector2Array(318, 179, 257, 239, 258, 298, 259, 342, 279, 371, 320, 393, 374, 392, 374, 352, 473, 354, 525, 351, 584, 276, 574, 219, 569, 189, 498, 140, 444, 138, 449, 180)
+
+[node name="puddle2" type="StaticBody2D" parent="puddlearea"]
+position = Vector2(211, 93)
+scale = Vector2(0.075, 0.075)
+
+[node name="Sprite2D" type="Sprite2D" parent="puddlearea/puddle2"]
+position = Vector2(402, 265)
+texture = ExtResource("3_6tp8f")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="puddlearea/puddle2"]
+polygon = PackedVector2Array(318, 179, 257, 239, 258, 298, 259, 342, 279, 371, 320, 393, 374, 392, 374, 352, 473, 354, 525, 351, 584, 276, 574, 219, 569, 189, 498, 140, 444, 138, 449, 180)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="puddlearea"]
+position = Vector2(242.768, 115.06)
+shape = SubResource("RectangleShape2D_3jadm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="puddlearea"]
+position = Vector2(190, 131)
+shape = SubResource("RectangleShape2D_3jadm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puddlearea"]
+position = Vector2(133.5, 82)
+shape = SubResource("RectangleShape2D_3jadm")
+
 [node name="Ghost" parent="." instance=ExtResource("2_s3dwp")]
-position = Vector2(159, 148)
+position = Vector2(224, 82)
 
 [node name="Ghost2" parent="." instance=ExtResource("2_s3dwp")]
-position = Vector2(197.5, 102)
+position = Vector2(123, 147)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-position = Vector2(104, 57)
+position = Vector2(103, 61)
 navigation_polygon = SubResource("NavigationPolygon_wpg3w")
 
 [node name="MopWater" parent="." instance=ExtResource("4_gkvsl")]

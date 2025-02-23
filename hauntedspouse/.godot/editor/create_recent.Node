@@ -1,8 +1,10 @@
+CollisionShape2D
 Area2D
+CollisionPolygon2D
 Sprite2D
+StaticBody2D
 TextureRect
 Window
-CollisionShape2D
 AnimatedSprite2D
 DirectionalLight2D
 PointLight2D
@@ -10,5 +12,3 @@ WorldEnvironment
 NavigationRegion2D
 Node2D
 NavigationAgent2D
-CharacterBody2D
-StaticBody2D
