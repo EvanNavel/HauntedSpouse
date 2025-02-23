@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="HauntedSpouse"
-run/main_scene="res://scenes/House/master_bedroom.tscn"
+run/main_scene="res://scenes/House/testing/test_first_floor.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 

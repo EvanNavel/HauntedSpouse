@@ -1,7 +1,6 @@
-res://scenes/ui/pause_screen.tscn
-res://scenes/House/house_tile_set.tres
-res://scenes/ui/pause_screen.gd
 res://scenes/player.tscn
+res://scenes/ui/pause_screen.gd
+res://scenes/House/house_tile_set.tres
 res://scenes/House/houselayers.tscn
 res://scenes/House/bathroom.tscn
 res://scenes/House/kitchen.tscn
@@ -33,8 +32,10 @@ res://scenes/minigames/organize_books.tscn
 res://scenes/ghosts/ghost_enters_object.tscn
 res://scenes/ghosts/ghost_static.tscn
 res://scenes/objects/pickup_sound.tscn
-res://scenes/ui/game_manager.tscn
+res://scenes/ui/title_screen.tscn
+res://scenes/objects/fire.tscn
+res://scenes/ui/pause_screen.tscn
+res://scenes/ui/pause_test.tscn
+res://scenes/ui/pause_test.gd
+res://scenes/player.gd
 res://scenes/House/testing/test_first_floor.gd
-res://scenes/ui/settings.tscn
-res://scenes/ui/settings.gd
-res://scenes/ui/title_screen.gd

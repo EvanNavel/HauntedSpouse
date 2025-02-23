@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @export var task_panel: PanelContainer
 @export var inventory_panel: PanelContainer
+@export var pause_screen: PanelContainer
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var scare_timer: Timer = $ScareTimer
@@ -19,6 +20,9 @@ func _ready() -> void:
 
 	if inventory_panel:
 		inventory_panel.visible = true
+		
+	if pause_screen:
+		pause_screen.visible = false
 
 func _physics_process(_delta: float) -> void:
 	#toggle for task panel
@@ -27,6 +31,9 @@ func _physics_process(_delta: float) -> void:
 
 	if inventory_panel and Input.is_action_just_pressed("inventory_toggle"):
 		inventory_panel.visible = !inventory_panel.visible
+
+	if pause_screen and Input.is_action_just_pressed("escape"):
+		pause_screen.visible = !pause_screen.visible
 
 	if scared:
 		animated_sprite_2d.play("Idle"+previous_direction)

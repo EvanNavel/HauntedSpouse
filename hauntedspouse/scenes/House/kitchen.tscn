@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://01p8k60we340" path="res://scenes/objects/mop.tscn" id="4_blpri"]
 [ext_resource type="PackedScene" uid="uid://cayo8r4dy0jnd" path="res://scenes/ghosts/ghost_enters_object.tscn" id="4_gcguv"]
 [ext_resource type="PackedScene" uid="uid://bh614r7jpm1qm" path="res://scenes/minigames/put_out_fire.tscn" id="6_gkkql"]
-[ext_resource type="PackedScene" uid="uid://c338fjvxpplk4" path="res://scenes/objects/fire.tscn" id="6_om4t7"]
+[ext_resource type="PackedScene" uid="uid://btc35mc1b45g4" path="res://scenes/objects/fire.tscn" id="6_om4t7"]
 [ext_resource type="PackedScene" uid="uid://bcsuka7nmror0" path="res://scenes/minigames/cleansing.tscn" id="8_wp0oo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pnoyt"]

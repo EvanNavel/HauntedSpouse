@@ -32,10 +32,11 @@ position = Vector2(-121, 182)
 [node name="Kitchen" parent="." instance=ExtResource("3_jr5kc")]
 position = Vector2(-601, 182)
 
-[node name="Player" parent="." node_paths=PackedStringArray("task_panel", "inventory_panel") instance=ExtResource("6_mjk2y")]
+[node name="Player" parent="." node_paths=PackedStringArray("task_panel", "inventory_panel", "pause_screen") instance=ExtResource("6_mjk2y")]
 position = Vector2(367, 297)
 task_panel = NodePath("../GameScreen/TaskPanel")
 inventory_panel = NodePath("../GameScreen/InventoryPanel")
+pause_screen = NodePath("../GameScreen/PauseTest")
 
 [node name="OverworldMusic" type="AudioStreamPlayer2D" parent="Player"]
 position = Vector2(-3.6478e-05, -20)
@@ -44,13 +45,6 @@ stream = ExtResource("8_3x087")
 autoplay = true
 
 [node name="GameScreen" parent="." instance=ExtResource("7_wa2xf")]
-
-[node name="Control" parent="GameScreen" index="1"]
-anchors_preset = 0
-offset_left = -166.0
-offset_top = 417.0
-offset_right = 154.0
-offset_bottom = 627.0
 
 [node name="Parlor" parent="." instance=ExtResource("9_ews1l")]
 position = Vector2(488, -103)
