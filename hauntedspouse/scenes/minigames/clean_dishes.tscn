@@ -21,9 +21,9 @@ script = ExtResource("1_6ip3b")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(500, 300)
-offset_right = 40.0
-offset_bottom = 40.0
-size_flags_horizontal = 4
+offset_right = 500.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
 size_flags_vertical = 4
 
 [node name="ColorRect" type="ColorRect" parent="MarginContainer"]
@@ -37,16 +37,17 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 texture = SubResource("AtlasTexture_e3xdu")
 
-[node name="Plate" parent="MarginContainer" instance=ExtResource("3_sahu2")]
-script = null
+[node name="Plate1" parent="MarginContainer" node_paths=PackedStringArray("shmoo") instance=ExtResource("3_sahu2")]
+position = Vector2(100, 73)
+shmoo = NodePath("../Shmoo")
 
-[node name="Plate2" parent="MarginContainer" instance=ExtResource("3_sahu2")]
-position = Vector2(277, 200)
-script = null
+[node name="Plate2" parent="MarginContainer" node_paths=PackedStringArray("shmoo") instance=ExtResource("3_sahu2")]
+position = Vector2(400, 73)
+shmoo = NodePath("../Shmoo2")
 
-[node name="Plate3" parent="MarginContainer" instance=ExtResource("3_sahu2")]
-position = Vector2(377, 77)
-script = null
+[node name="Plate3" parent="MarginContainer" node_paths=PackedStringArray("shmoo") instance=ExtResource("3_sahu2")]
+position = Vector2(270, 220)
+shmoo = NodePath("../Shmoo3")
 
 [node name="Shmoo" parent="MarginContainer" instance=ExtResource("4_gmi4o")]
 position = Vector2(115, 115)

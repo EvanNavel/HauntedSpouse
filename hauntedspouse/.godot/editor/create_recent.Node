@@ -1,3 +1,5 @@
+MarginContainer
+PanelContainer
 Button
 Label
 ColorRect
@@ -5,11 +7,8 @@ Control
 AudioStreamPlayer2D
 VBoxContainer
 LineEdit
-MarginContainer
 Window
 CollisionShape2D
 Area2D
 AnimatedSprite2D
 DirectionalLight2D
-PointLight2D
-WorldEnvironment

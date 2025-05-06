@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_t2gog"]
 [ext_resource type="PackedScene" uid="uid://cuhh3dw713ck2" path="res://scenes/objects/fire_extinguisher.tscn" id="2_q6eb3"]
 [ext_resource type="PackedScene" uid="uid://cd7wecw3juqdd" path="res://scenes/ghosts/ghost.tscn" id="3_qmqe6"]
-[ext_resource type="PackedScene" path="res://scenes/objects/fire.tscn" id="4_jpvwv"]
+[ext_resource type="PackedScene" uid="uid://btc35mc1b45g4" path="res://scenes/objects/fire.tscn" id="4_jpvwv"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ty8gf"]
 vertices = PackedVector2Array(258, 110.961, 18, 110.031, 18, 15, 258, 15)

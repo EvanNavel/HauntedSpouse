@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ysotjh8vegfv"]
 
 [ext_resource type="Script" path="res://scenes/components/collectible_component.gd" id="1_fsfjy"]
-[ext_resource type="PackedScene" path="res://scenes/objects/pickup_sound.tscn" id="2_2vup5"]
+[ext_resource type="PackedScene" uid="uid://dvxweoj7n2l3h" path="res://scenes/objects/pickup_sound.tscn" id="2_2vup5"]
 
 [node name="CollectibleComponent" type="Area2D"]
 collision_mask = 2

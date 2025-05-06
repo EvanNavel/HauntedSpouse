@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var sink_area: Area2D = $SinkArea
-@onready var clean_dishes: Window = %CleanDishes
+@onready var clean_dishes: Window = $CleanDishes
 @onready var organize_table: Window = $OrganizeTable
 @onready var table_area: Area2D = $TableArea
 @onready var firearea: Area2D = $Firearea
