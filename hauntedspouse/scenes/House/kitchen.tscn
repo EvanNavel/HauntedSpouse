@@ -1,10 +1,14 @@
-[gd_scene load_steps=9 format=4 uid="uid://bxj06uu3pxl4g"]
+[gd_scene load_steps=14 format=4 uid="uid://bxj06uu3pxl4g"]
 
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_6rwmx"]
 [ext_resource type="Script" path="res://scenes/House/kitchen.gd" id="1_ojve4"]
 [ext_resource type="PackedScene" uid="uid://c8nfypojvlh3e" path="res://scenes/minigames/clean_dishes.tscn" id="2_r2acj"]
 [ext_resource type="PackedScene" uid="uid://bw1onc65swr5y" path="res://scenes/minigames/organize_table.tscn" id="4_2mxju"]
 [ext_resource type="PackedScene" uid="uid://01p8k60we340" path="res://scenes/objects/mop.tscn" id="4_blpri"]
+[ext_resource type="PackedScene" uid="uid://cayo8r4dy0jnd" path="res://scenes/ghosts/ghost_enters_object.tscn" id="4_gcguv"]
+[ext_resource type="PackedScene" uid="uid://bh614r7jpm1qm" path="res://scenes/minigames/put_out_fire.tscn" id="6_gkkql"]
+[ext_resource type="PackedScene" uid="uid://btc35mc1b45g4" path="res://scenes/objects/fire.tscn" id="6_om4t7"]
+[ext_resource type="PackedScene" uid="uid://bcsuka7nmror0" path="res://scenes/minigames/cleansing.tscn" id="8_wp0oo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pnoyt"]
 size = Vector2(64, 66)
@@ -14,6 +18,9 @@ size = Vector2(82, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2y634"]
 size = Vector2(414, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3on3b"]
+size = Vector2(122, 74)
 
 [node name="Kitchen" type="Node2D"]
 script = ExtResource("1_ojve4")
@@ -46,15 +53,25 @@ tile_set = ExtResource("1_6rwmx")
 tile_set = ExtResource("1_6rwmx")
 
 [node name="CleanDishes" parent="." instance=ExtResource("2_r2acj")]
-unique_name_in_owner = true
 visible = false
 
 [node name="SinkArea" type="Area2D" parent="."]
 collision_mask = 2
 
+[node name="SinkAreaLabel" type="Label" parent="SinkArea"]
+visible = false
+offset_left = 163.0
+offset_top = -24.0
+offset_right = 218.0
+offset_bottom = -1.0
+text = "Press E"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SinkArea"]
 position = Vector2(193, 23)
 shape = SubResource("RectangleShape2D_pnoyt")
+
+[node name="GhostEntersObject" parent="SinkArea" instance=ExtResource("4_gcguv")]
+position = Vector2(191, 7)
 
 [node name="OrganizeTable" parent="." instance=ExtResource("4_2mxju")]
 visible = false
@@ -69,6 +86,17 @@ collision_mask = 2
 position = Vector2(191, 108.5)
 shape = SubResource("RectangleShape2D_wxcn1")
 
+[node name="TableAreaLabel" type="Label" parent="TableArea"]
+visible = false
+offset_left = 107.0
+offset_top = 54.0
+offset_right = 162.0
+offset_bottom = 77.0
+text = "Press E"
+
+[node name="GhostEntersObject" parent="TableArea" instance=ExtResource("4_gcguv")]
+position = Vector2(191, 90)
+
 [node name="TaskArea" type="Area2D" parent="."]
 collision_mask = 2
 
@@ -76,9 +104,51 @@ collision_mask = 2
 position = Vector2(208, 97)
 shape = SubResource("RectangleShape2D_2y634")
 
+[node name="PutOutFire" parent="." instance=ExtResource("6_gkkql")]
+visible = false
+
+[node name="Firearea" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="Fire" parent="Firearea" instance=ExtResource("6_om4t7")]
+position = Vector2(377, 37)
+
+[node name="Fire2" parent="Firearea" instance=ExtResource("6_om4t7")]
+position = Vector2(400, 44)
+
+[node name="Fire3" parent="Firearea" instance=ExtResource("6_om4t7")]
+position = Vector2(325, 39)
+
+[node name="Fire4" parent="Firearea" instance=ExtResource("6_om4t7")]
+position = Vector2(302, 28)
+
+[node name="Fire5" parent="Firearea" instance=ExtResource("6_om4t7")]
+position = Vector2(353, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Firearea"]
+position = Vector2(352, 47)
+shape = SubResource("RectangleShape2D_3on3b")
+
+[node name="FireAreaLabel" type="Label" parent="Firearea"]
+visible = false
+offset_left = 295.0
+offset_top = -26.0
+offset_right = 350.0
+offset_bottom = -3.0
+text = "Press E"
+
+[node name="GhostEntersObject" parent="Firearea" instance=ExtResource("4_gcguv")]
+position = Vector2(353, 21)
+
+[node name="Cleansing" parent="." instance=ExtResource("8_wp0oo")]
+visible = false
+position = Vector2(58, 103)
+
 [connection signal="body_entered" from="SinkArea" to="." method="_on_sink_area_body_entered"]
 [connection signal="body_exited" from="SinkArea" to="." method="_on_sink_area_body_exited"]
 [connection signal="body_entered" from="TableArea" to="." method="_on_table_area_body_entered"]
 [connection signal="body_exited" from="TableArea" to="." method="_on_table_area_body_exited"]
 [connection signal="body_entered" from="TaskArea" to="." method="_on_task_area_body_entered"]
 [connection signal="body_exited" from="TaskArea" to="." method="_on_task_area_body_exited"]
+[connection signal="body_entered" from="Firearea" to="." method="_on_firearea_body_entered"]
+[connection signal="body_exited" from="Firearea" to="." method="_on_firearea_body_exited"]

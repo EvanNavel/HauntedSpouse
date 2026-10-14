@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://c3buccn73dc25"]
+
+[ext_resource type="Script" path="res://scenes/ui/title_screen.gd" id="1_7am6i"]
+[ext_resource type="Texture2D" uid="uid://o5440q3grp7g" path="res://assets/ui/logo.png" id="1_dnw6o"]
+[ext_resource type="Texture2D" uid="uid://d3lita6fply3u" path="res://assets/ui/title_ghost_1.png" id="3_t0qen"]
+[ext_resource type="Script" path="res://scenes/ui/title_animation.gd" id="3_vbsw7"]
+[ext_resource type="Texture2D" uid="uid://br44cq5bqumrw" path="res://assets/ui/title_ghost_2.png" id="5_mg2jl"]
+[ext_resource type="Texture2D" uid="uid://bnvfgige1ryew" path="res://assets/ui/title_ghost_4.png" id="6_6urg7"]
+[ext_resource type="Texture2D" uid="uid://bc8qtvp3m4y31" path="res://assets/ui/title_ghost_6.png" id="7_xnyld"]
+[ext_resource type="Texture2D" uid="uid://dcl0mkglshc8o" path="res://assets/ui/title_ghost_3.png" id="8_wqucp"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_7am6i")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -102.0
+offset_top = -64.0
+offset_right = 1092.0
+offset_bottom = 613.0
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 320.0
+offset_right = 534.0
+offset_bottom = 421.0
+
+[node name="start_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="settings_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="quit_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 23.971
+anchor_bottom = 13.47
+offset_left = 328.0
+offset_top = 120.0
+offset_right = -337.84
+offset_bottom = -269.8
+texture = ExtResource("1_dnw6o")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(288, 192)
+rotation = 0.0581425
+scale = Vector2(1.55607, 1.65614)
+texture = ExtResource("3_t0qen")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(648, 200)
+rotation = -0.328876
+scale = Vector2(1.55607, 1.65614)
+texture = ExtResource("5_mg2jl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(1.77944, 1.71396)
+texture = ExtResource("6_6urg7")
+script = ExtResource("3_vbsw7")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(344, 368)
+rotation = -0.408833
+scale = Vector2(1.42848, 1.35756)
+texture = ExtResource("7_xnyld")
+script = ExtResource("3_vbsw7")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(248, 272)
+scale = Vector2(1.35092, 1.27702)
+texture = ExtResource("8_wqucp")
+script = ExtResource("3_vbsw7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(8, 0)

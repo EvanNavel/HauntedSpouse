@@ -1,20 +1,24 @@
-[gd_scene load_steps=11 format=3 uid="uid://o5ueq3ti1v4y"]
+[gd_scene load_steps=13 format=4 uid="uid://o5ueq3ti1v4y"]
 
 [ext_resource type="PackedScene" uid="uid://c8bn8tdguq2sf" path="res://scenes/House/foyer.tscn" id="1_hbyln"]
 [ext_resource type="TileSet" uid="uid://c832btw0vg02f" path="res://scenes/House/house_tile_set.tres" id="1_ob757"]
+[ext_resource type="Script" path="res://scenes/House/testing/test_first_floor.gd" id="1_wudak"]
 [ext_resource type="PackedScene" uid="uid://b6kuee3wdyte4" path="res://scenes/House/study.tscn" id="2_n07i3"]
 [ext_resource type="PackedScene" uid="uid://bxj06uu3pxl4g" path="res://scenes/House/kitchen.tscn" id="3_jr5kc"]
 [ext_resource type="PackedScene" uid="uid://b5wvg146b3ihn" path="res://scenes/House/dining_room.tscn" id="5_3w2wf"]
 [ext_resource type="PackedScene" uid="uid://d0cdx7weekfyd" path="res://scenes/player.tscn" id="6_mjk2y"]
 [ext_resource type="PackedScene" uid="uid://d31egc2sj82um" path="res://scenes/ui/game_screen.tscn" id="7_wa2xf"]
-[ext_resource type="AudioStream" uid="uid://c1kelkpko4u7c" path="res://assets/music/Game Jam Overworld Theme wav.wav" id="8_3x087"]
+[ext_resource type="AudioStream" uid="uid://cq8a1oilrjjca" path="res://assets/music/Game Jam Overworld Theme wav v2.wav" id="8_ysbxx"]
 [ext_resource type="PackedScene" uid="uid://gc8s3hrwbn8g" path="res://scenes/House/parlor.tscn" id="9_ews1l"]
+[ext_resource type="PackedScene" path="res://scenes/ui/textbox.tscn" id="10_asdv0"]
 [ext_resource type="PackedScene" uid="uid://txr366fe71hs" path="res://scenes/kylin.tscn" id="10_fevop"]
 
 [node name="TestFirstFloor" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_wudak")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAjAAoAAAABABAAAAAjAAsAAAABABAAAAAjAAwAAAABABAAAAAjAA0AAAABABAAAAAWABkAAAALABEAAAAXABkAAAALABEAAAAWABoAAAALABEAAAAXABoAAAALABEAAAAYABoAAAALABEAAAA=")
 tile_set = ExtResource("1_ob757")
 
 [node name="Study" parent="." instance=ExtResource("2_n07i3")]
@@ -37,10 +41,13 @@ inventory_panel = NodePath("../GameScreen/InventoryPanel")
 [node name="OverworldMusic" type="AudioStreamPlayer2D" parent="Player"]
 position = Vector2(-3.33337, -20)
 scale = Vector2(1.11111, 1.11111)
-stream = ExtResource("8_3x087")
+stream = ExtResource("8_ysbxx")
 autoplay = true
 
 [node name="GameScreen" parent="." instance=ExtResource("7_wa2xf")]
+
+[node name="TextBox" parent="." node_paths=PackedStringArray("player") instance=ExtResource("10_asdv0")]
+player = NodePath("../Player")
 
 [node name="Parlor" parent="." instance=ExtResource("9_ews1l")]
 position = Vector2(488, -103)

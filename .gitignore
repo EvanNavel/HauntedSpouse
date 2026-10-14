@@ -1,0 +1,15 @@
+# Godot 4 editor cache and imported asset data (regenerated on open)
+.godot/
+/android/
+
+# Godot temp files saved next to scenes
+*.tmp
+
+# Export output
+*.translation
+export_presets.cfg
+builds/
+
+# OS files
+.DS_Store
+Thumbs.db
